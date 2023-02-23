@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '02b - Manage Governance via Azure Policy'
+    title: '02a - Manage Governance via Azure Policy'
     module: 'Administer Governance and Compliance'
 ---
 
@@ -41,27 +41,30 @@ In this lab, we will:
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
+1. Sign in to the [Azure portal](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
+
 1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+![image](../media/lab02b.png)
 
-1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
+
+1. From the Cloud Shell pane, run the create storage using following:
 
    ```powershell
-   df
+   Resource Group -> Create New -> <6+2>rg   eg:madalrtrg 
+   ```
+   ```powershell
+   Storage Account -> Create New -> <6+2>storage eg:madalrtstorage 
+   ```
+   ```powershell
+   File Share -> Create New -> <6+2>fs  eg:madalrtfs  
    ```
 
-1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxxxxxxxxxxxx`:
-
-   ```
-   //xxxxxxxxxxxxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
-   ```
-
-1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
+1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
 
 1. On the storage account blade, click the link representing the name of the resource group containing the storage account.
 
-    **Note**: note what resource group the storage account is in, you'll need it later in the lab.
+    **Note**: Note what resource group the storage account is in, you'll need it later in the lab.
 
 1. On the resource group blade, click Click **edit** next to **Tags** to create new tags.
 
@@ -69,8 +72,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     | Setting | Value |
     | --- | --- |
-    | Name | **Role** |
-    | Value | **Infra** |
+    | Name | **UCID** |
+    | Value | **<your 6+2>** Eg: mandalrt |
 
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
@@ -90,8 +93,8 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
+    | Subscription | the name of the Azure subscription you are using in this lab - CECH SoIT Bootcamp |
+    | Resource Group | Your <6_2>rg resource group containing the Cloud Shell account you created in the previous task |
 
     >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
@@ -99,18 +102,19 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Require Role tag with Infra value**|
-    | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group**|
+    | Assignment name | **Require Role tag with UCID value**|
+    | Description | **Require Role tag with UCID value for all resources in the <6+2>rg resource group**|
     | Policy enforcement | Enabled |
+    | Assigned by | <6+2> |
 
-    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
+    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. 
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role** |
-    | Tag Value | **Infra** |
+    | Tag Name | **UCID** |
+    | Tag Value | **<6+2>** |
 
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -122,7 +126,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
-1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
+1. Navigate back to the blade of the resource group <6+2>rg hosting the storage account, which you created in the previous task.
 
 1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
 
@@ -130,15 +134,21 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
+    | Resource Group | your <6+2>rg |
+    | Storage account name | <6+2>storage1 eg:mandalrtstorage1 |
+    | Region | Default (US) East US|
+    | Perfromace | **Standard** |
+    | Redundacy | Local Redudant Storage (LRS) | 
 
     >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason for the failure and skip the next step. 
+
+1. click **Review** and then click **Create**
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
-    >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
+    >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with UCID value**. The deployment failed because the storage account you attempted to create did not have a tag named **UCID** with its value set to **<6+2>**.
 
 #### Task 3: Apply tagging via an Azure policy
 
@@ -148,14 +158,14 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the **Authoring** section, click **Assignments**. 
 
-1. In the list of assignments, click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+1. In the list of assignments, click the ellipsis icon (3 dots) in the row representing the **Require Role tag with UCID value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
+    | Resource Group | <6+2> Resource group you created intially |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
@@ -163,15 +173,15 @@ In this task, we will use a different policy definition to remediate any non-com
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
+    | Assignment name | **Inherit the UCID tag and its <6+2> value from the resource group if missing**|
+    | Description | **Inherit the UCID tag and its <6+2> value from the resource group if missing**|
     | Policy enforcement | Enabled |
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role** |
+    | Tag Name | **UCID** |
 
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults):
 
@@ -196,27 +206,15 @@ In this task, we will use a different policy definition to remediate any non-com
 
     | Setting | Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
+    | Resource Group | your <6+2>rg |
+    | Storage account name | <6+2>storage1 eg:mandalrtstorage1 |
+    | Region | Default (US) East US|
+    | Perfromace | **Standard** |
+    | Redundacy | Local Redudant Storage (LRS) | 
 
 1. Verify that this time the validation passed and click **Create**.
 
-1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
-
-#### Task 4: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
-   
-   >**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
-
-1. In the portal, search for and select **Policy**.
-
-1. In the **Authoring** section, click **Assignments**, click the ellipsis icon to the right of the assignment you created in the previous task and click **Delete assignment**. 
-
-1. In the portal, search for and select **Storage accounts**.
-
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Apply**. 
-
-1. Click **Overview** and click **Delete** on the top of the storage account blade. When prompted for the confirmation, in the **Delete storage account** blade, type the name of the storage account to confirm and click **Delete**. 
+1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **UCID** with the value **<6+2>** has been automatically assigned to the resource.
 
 #### Review
 
