@@ -4,7 +4,7 @@ lab:
     module: 'Administer Governance and Compliance'
 ---
 
-# Lab 02b - Manage Governance via Azure Policy
+# Lab 02a - Manage Governance via Azure Policy
 # Student lab manual
 
 ## Lab scenario
