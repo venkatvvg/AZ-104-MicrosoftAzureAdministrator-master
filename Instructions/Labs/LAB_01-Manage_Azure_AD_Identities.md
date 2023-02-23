@@ -59,16 +59,6 @@ Save this information for your future use in the course.
 ```
 
 
-```diff
-+ text in green
-```
-
-```diff
-+ text in green
-```
-```diff
-+ text in green
-```
 
 
 ### Exercise 1
