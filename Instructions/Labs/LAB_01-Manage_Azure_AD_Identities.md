@@ -56,7 +56,7 @@ Save this information for your future use in the course.
 
 ```diff
 - text in red
-+ text in green
++ text in green +
 ! text in orange
 # text in gray
 @@ text in purple (and bold)@@
