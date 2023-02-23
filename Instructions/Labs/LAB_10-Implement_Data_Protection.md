@@ -61,7 +61,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
    $rgName = 'az104-10-rg0'
     ```
     
-   ```powershell
+   ```
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 
