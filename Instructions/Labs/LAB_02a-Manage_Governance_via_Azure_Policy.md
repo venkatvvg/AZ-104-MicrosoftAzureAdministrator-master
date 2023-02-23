@@ -205,7 +205,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Resource Group | your <6+2>rg |
-    | Storage account name | <6+2>storage1 eg:mandalrtstorage1 |
+    | Storage account name | <6+2>storage1 eg:mandalrtstorage2 |
     | Region | Default (US) East US|
     | Perfromace | **Standard** |
     | Redundacy | Local Redudant Storage (LRS) | 
