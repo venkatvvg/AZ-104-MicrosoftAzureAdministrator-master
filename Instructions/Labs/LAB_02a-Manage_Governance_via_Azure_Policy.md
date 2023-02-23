@@ -44,9 +44,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 1. Sign in to the [Azure portal](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
-
-![image](../media/lab02b.png)
-
+2. ![image](../media/lab02b.png)
 
 1. From the Cloud Shell pane, click advanced settings using following:
 
