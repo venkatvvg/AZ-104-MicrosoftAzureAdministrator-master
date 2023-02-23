@@ -55,7 +55,7 @@ Save this information for your future use in the course.
 >**Screenshot 1**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
 ```diff
-text in green
++ text in green
 ```
 
 
