@@ -48,7 +48,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 ![image](../media/lab02b.png)
 
 
-1. From the Cloud Shell pane, click adavanced settings using following:
+1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
    Resource Group -> Create New -> <6+2>rg   eg:madalrtrg 
