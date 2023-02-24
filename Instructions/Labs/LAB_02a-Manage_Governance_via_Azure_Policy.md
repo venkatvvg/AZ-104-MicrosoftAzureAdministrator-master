@@ -57,7 +57,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ```powershell
    File Share -> Create New -> <6+2>fs  eg:madalrtfs  
    ```
-   ```
+   ```python
    for i in j: 
    ```
 
