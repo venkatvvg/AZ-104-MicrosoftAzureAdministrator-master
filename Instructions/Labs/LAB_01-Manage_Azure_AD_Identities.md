@@ -28,7 +28,7 @@ In this lab, you will:
 
 •	Task 4: Manage Azure AD guest users
 
-•	Task 5: Manage Azure AD guest user from University of Cincinnati. (Students should work on their own, do not follow the instruction in the GitHub link for this task)
+•	Task 5: Manage Azure AD guest user from University of Cincinnati. 
 
 
 ## Estimated timing: 30 minutes
