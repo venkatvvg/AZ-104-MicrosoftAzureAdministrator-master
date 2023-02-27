@@ -65,7 +65,7 @@ Save this information for your future use in the course.
 
 ![image](../media/lab1-8.png)
 
->**Screenshot 1**: Showing the subscription is activated.
+>**[Screenshot 1]**: Showing the subscription is activated.
 
 
 ### Exercise 1
