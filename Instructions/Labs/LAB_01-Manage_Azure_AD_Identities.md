@@ -296,7 +296,12 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 #### Task 5: Manage Azure AD guest user from University of Cincinnati.
 
-1. Verify the architecture diagram and understand the requirement.
+1. Verify the architecture diagram and understand the requirement for task 5. 
+
+Invite External user: **<6+2>@mail.uc.edu**
+Role: **Global Administrator**
+Job Title: **Global Administrator**
+Department: **IT**
 
 ![image](../media/lab1-1.png)
 
