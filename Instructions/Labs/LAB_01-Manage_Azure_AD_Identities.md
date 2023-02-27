@@ -21,9 +21,13 @@ Please read through the document and learn any concepts you are not clear about 
 In this lab, you will:
 
 •	Task 1: Create and configure Azure AD users
+
 •	Task 2: Create Azure AD groups with assigned and dynamic membership
+
 •	Task 3: Create an Azure Active Directory (AD) tenant
+
 •	Task 4: Manage Azure AD guest users
+
 •	Task 5: Manage Azure AD guest user from University of Cincinnati. (Students should work on their own, do not follow the instruction in the GitHub link for this task)
 
 
