@@ -32,6 +32,9 @@ In this lab, you will:
 
 >**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
 
+
+>**Screenshot**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
+
 ## Estimated timing: 30 minutes
 
 ## Architecture diagram
