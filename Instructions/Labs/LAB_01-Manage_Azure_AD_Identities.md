@@ -102,7 +102,7 @@ In this task, you will create and configure Azure AD users.
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
 
-    >**Screenshot 2: Showing newly created user**.
+    >[**Screenshot 2]: Showing newly created user**.
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
