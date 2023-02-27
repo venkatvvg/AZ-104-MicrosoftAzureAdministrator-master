@@ -44,20 +44,20 @@ Password: Give as per your choice
 First name and Last name as per the registration at UC.
 Save this information for your future use in the course.
 
-1. Join the Microsoft 365 Developer Program using the email created at [Developer Program | Microsoft 365 Dev Center by clicking Join](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+2. Join the Microsoft 365 Developer Program using the email created at [Developer Program | Microsoft 365 Dev Center by clicking Join](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
 
-1. You will need to give below details to begin with, use ‘<6+2>Dev’ as your company in my case it was ‘mandalrtDev’
+3. You will need to give below details to begin with, use ‘<6+2>Dev’ as your company in my case it was ‘mandalrtDev’
 
 ![image](../media/lab1-2.png)
 ![image](../media/lab1-3.png)
 ![image](../media/lab1-4.png)
 
-1. Now signup for the E5 Subscription
+4. Now signup for the E5 Subscription
 
 ![image](../media/lab1-5.png)
 ![image](../media/lab1-6.png)
 
-1. Use your 6+2 as your username in my case it was mandalrt
+5. Use your 6+2 as your username in my case it was mandalrt
 
 ![image](../media/lab1-7.png)
 
