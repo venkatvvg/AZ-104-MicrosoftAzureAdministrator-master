@@ -65,7 +65,7 @@ Save this information for your future use in the course.
 
 ![image](../media/lab1-8.png)
 
->**Screenshot 1**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
+>**Screenshot 1**: Showing the subscription is activated.
 
 
 ### Exercise 1
@@ -76,7 +76,7 @@ In this task, you will create and configure Azure AD users.
 
 >**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant and perform the Task 2 after Task 3 in that new Azure AD tenant.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com) in new tab and login using the email and password saved in the above step.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
@@ -94,14 +94,15 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
+    | User name | **<6+2>-az104-01a-aaduser1** |
+    | Name | **<6+2>-az104-01a-aaduser1** |
     | Let me create the password | enabled |
     | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
 
+    >**Screenshot 2**: Showing newly created user.
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. In the list of users, click the newly created user account to display its blade.
@@ -122,21 +123,25 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
+    >**Screenshot 3**: Showing No access to permissions for the user.
+
 1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
+    | User name | **<6+2>-az104-01a-aaduser2** |
+    | Name | **<6+2>-az104-01a-aaduser2** |
     | Let me create the password | enabled |
     | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
+    
+    >**Screenshot 4**: Showing newly created user.
 
-1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
+1. Sign out as the <6+2>-az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
 #### Task 2: Create Azure AD groups with assigned and dynamic membership
 
