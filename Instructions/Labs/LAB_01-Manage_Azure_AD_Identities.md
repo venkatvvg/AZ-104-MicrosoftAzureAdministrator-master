@@ -61,13 +61,13 @@ Save this information for your future use in the course.
 
 ![image](../media/lab1-7.png)
 
-1. Save your username and password for future use in the course. You will be asked for recovery phone when you click continue, once you verify your phone number and click setup you subscription will be activated and see the screen as below, it will create additional users for your use at this stage. 
+6. Save your username and password for future use in the course. You will be asked for recovery phone when you click continue, once you verify your phone number and click setup you subscription will be activated and see the screen as below, it will create additional users for your use at this stage. 
 
 
 >**Screenshot 1**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
 ```diff
-+ text in green
++ >**Screenshot 1**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 ```
 
 
