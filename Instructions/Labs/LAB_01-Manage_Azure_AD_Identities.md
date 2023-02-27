@@ -13,15 +13,19 @@ lab:
 In order to allow users from your organization to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription. You are required to add your UC-email to your organization and grant that account limited permissions to resources in your organization.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+Please read through the document and learn any concepts you are not clear about from the Microsoft documents and the course content provided in the module.
+
 
 ## Objectives
 
 In this lab, you will:
 
-+ Task 1: Create and configure Azure AD users
-+ Task 2: Create Azure AD groups with assigned and dynamic membership
-+ Task 3: Create an Azure Active Directory (AD) tenant (Optional - lab environment issue)
-+ Task 4: Manage Azure AD guest users (Optional - lab environment issue)
+•	Task 1: Create and configure Azure AD users
+•	Task 2: Create Azure AD groups with assigned and dynamic membership
+•	Task 3: Create an Azure Active Directory (AD) tenant
+•	Task 4: Manage Azure AD guest users
+•	Task 5: Manage Azure AD guest user from University of Cincinnati. (Students should work on their own, do not follow the instruction in the GitHub link for this task)
+
 
 ## Estimated timing: 30 minutes
 
