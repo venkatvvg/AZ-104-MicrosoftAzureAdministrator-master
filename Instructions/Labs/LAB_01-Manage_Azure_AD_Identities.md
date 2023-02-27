@@ -30,6 +30,7 @@ In this lab, you will:
 
 •	Task 5: Manage Azure AD guest user from University of Cincinnati. 
 
+    >**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
 
 ## Estimated timing: 30 minutes
 
@@ -73,8 +74,6 @@ Save this information for your future use in the course.
 #### Task 1: Create and configure Azure AD users
 
 In this task, you will create and configure Azure AD users.
-
->**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant and perform the Task 2 after Task 3 in that new Azure AD tenant.
 
 1. Sign in to the [Azure portal](https://portal.azure.com) in new tab and login using the email and password saved in the above step.
 
