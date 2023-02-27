@@ -102,7 +102,8 @@ In this task, you will create and configure Azure AD users.
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
 
-    >**Screenshot 2**: Showing newly created user.
+    >**Screenshot 2: Showing newly created user**.
+
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. In the list of users, click the newly created user account to display its blade.
@@ -123,7 +124,7 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
-    >**Screenshot 3**: Showing No access to permissions for the user.
+    >**Screenshot 3: Showing No access to permissions for the user**.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user**.
 
@@ -139,7 +140,7 @@ In this task, you will create and configure Azure AD users.
     | Job title | **System Administrator** |
     | Department | **IT** |
     
-    >**Screenshot 4**: Showing newly created user.
+    >**Screenshot 4: Showing newly created user**.
 
 1. Sign out as the <6+2>-az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
