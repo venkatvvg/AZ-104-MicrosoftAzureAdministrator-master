@@ -30,7 +30,7 @@ In this lab, you will:
 
 •	Task 5: Manage Azure AD guest user from University of Cincinnati. 
 
-    >**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
+>**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
 
 ## Estimated timing: 30 minutes
 
