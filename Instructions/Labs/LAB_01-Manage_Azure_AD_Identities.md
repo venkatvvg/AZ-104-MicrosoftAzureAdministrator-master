@@ -33,8 +33,6 @@ In this lab, you will:
 >**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
 
 
->**Screenshot**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
-
 ## Estimated timing: 30 minutes
 
 ## Architecture diagram
@@ -257,7 +255,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Setting | Value |
     | --- | --- |
     | User name | **<6+2>-az104-01b-aaduser1** |
-    | Name | **<6+2>az104-01b-aaduser1** |
+    | Name | **<6+2>-az104-01b-aaduser1** |
     | Let me create the password | enabled |
     | Initial password | **Provide a secure password** |
     | Job title | **System Administrator** |
@@ -301,8 +299,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. Verify the architecture diagram and understand the requirement for task 5. 
 
 Invite External user: **<6+2>@mail.uc.edu**
+
 Role: **Global Administrator**
+
 Job Title: **Global Administrator**
+
 Department: **IT**
 
 ![image](../media/lab1-1.png)
