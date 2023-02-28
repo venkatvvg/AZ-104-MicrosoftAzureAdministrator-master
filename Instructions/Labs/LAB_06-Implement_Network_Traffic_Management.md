@@ -194,6 +194,9 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
+>**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the peerings of az104-06-vnet01.
+
+
 #### Task 3: Test transitivity of virtual network peering
 
 In this task, you will test transitivity of virtual network peering by using Network Watcher.
