@@ -127,7 +127,9 @@ In this task, you will configure local and global peering between the virtual ne
     
    ```powershell
    $rgName = 'az104-05-rg1'
-
+   ```
+    
+   ```powershell
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
    $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
