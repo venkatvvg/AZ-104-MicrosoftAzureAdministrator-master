@@ -93,10 +93,16 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```powershell
    $rgName = '<6+2>-az104-06-rg1'
    ```
+   
    ```powershell
    $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
+   ```
+   
+   ```powershell   
    $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
-
+   ```
+   
+   ```powershell
    foreach ($vmName in $vmNames) {
      Set-AzVMExtension `
      -ResourceGroupName $rgName `
