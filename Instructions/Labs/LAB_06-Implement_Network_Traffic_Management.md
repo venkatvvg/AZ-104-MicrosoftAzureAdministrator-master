@@ -69,7 +69,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     New-AzResourceGroup -Name $rgName -Location $location
     ```
     
-    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Showing the output of the new resource group creating on PowerShell![image](https://user-images.githubusercontent.com/113364335/221971787-1add672e-2a00-45ee-8cee-ca4f713946e1.png)
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**:![image](https://user-images.githubusercontent.com/113364335/221971787-1add672e-2a00-45ee-8cee-ca4f713946e1.png)
 
 
 
