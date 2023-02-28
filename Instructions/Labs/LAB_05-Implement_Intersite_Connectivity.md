@@ -49,11 +49,19 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    ```powershell
    $location1 = 'eastus'
-
+   ```
+   
+   
+   ```powershell
    $location2 = 'westus'
+   ```
 
-   $rgName = 'az104-05-rg1'
 
+   ```powershell
+   $rgName = '<6+2>-az104-05-rg1'
+   ```
+
+   ```powershell
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
 
