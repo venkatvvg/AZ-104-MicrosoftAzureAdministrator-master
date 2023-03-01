@@ -56,6 +56,10 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ```powershell
    File Share -> Create New -> <6+2>fs  eg:madalrtfs  
    ```
+   
+    ```
+   File Share -> Create New -> <6+2>fs  eg:madalrtfs  
+   ```
 
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
