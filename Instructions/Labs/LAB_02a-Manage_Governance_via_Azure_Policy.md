@@ -43,8 +43,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
-1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
-  ![image](../media/lab02b.png)
+1. In the Azure portal, start a **PowerShell** session by clicking on the **Cloud Shell** in header section beside the search box.
 
 1. From the Cloud Shell pane, click advanced settings using following:
 
@@ -61,7 +60,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
 
-1. On the storage account blade, click the link representing the name of the resource group containing the storage account.
+1. On the storage account blade, click the link resource group name link.
 
     >**Note**: Note what resource group the storage account is in, you'll need it later in the lab.
 
@@ -88,15 +87,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
-1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab - CECH SoIT Bootcamp |
-    | Resource Group | Your <6_2>rg resource group containing the Cloud Shell account you created in the previous task |
-
-    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
-
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -107,6 +97,15 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Assigned by | <6+2> |
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. 
+
+1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
+
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab - CECH SoIT Bootcamp |
+    | Resource Group | Your <6_2>rg resource group containing the Cloud Shell account you created in the previous task |
+
+    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope).
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
