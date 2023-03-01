@@ -85,7 +85,6 @@ Save this information for your future use in the course.
 
 In this task, you will create and configure Azure AD users.
 
-## 1. Sign in to the [Azure portal](https://portal.azure.com) in new tab and login using the email and password saved in the above step.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
