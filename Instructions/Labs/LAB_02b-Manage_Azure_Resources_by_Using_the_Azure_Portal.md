@@ -52,7 +52,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 
 
-1. On the Disk SKU Select **Standard HDD**
+1. Under the Disk Details -> Size ->Select **Change size** -> Disk SKU -> **Standard HDD** -> 32GB
 
     >**Note**: Make sure you select standard HDD with 32GB
 
@@ -68,7 +68,7 @@ In this task, we will move the disk resource you created in the previous task to
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1** resource group you created in the previous task.
+1. On the **Resource groups** blade, click the entry representing the **<6+2>az104-03b-rg1** resource group you created in the previous task.
 
 1. From the **Overview** blade of the resource group, in the list of resource group resources, select the entry representing the newly created disk, click **Move** in the toolbar, and, in the drop-down list, select **Move to another resource group**.
 
