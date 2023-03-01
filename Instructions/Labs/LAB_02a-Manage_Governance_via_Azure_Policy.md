@@ -91,7 +91,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Require Role tag with UCID value**|
+    | Assignment name | **Require Role tag with UCID value <6+2>policy**|
     | Description | **Require Role tag with UCID value for all resources in the <6+2>rg resource group**|
     | Policy enforcement | Enabled |
     | Assigned by | <6+2> |

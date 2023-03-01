@@ -265,7 +265,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **<6+2>-az104-01b-aaduser1** |
+    | User name | **<6+2>-az104-01b-aaduser1** 
+    \
     | Name | **<6+2>-az104-01b-aaduser1** |
     | Let me create the password | enabled |
     | Initial password | **Provide a secure password** |
