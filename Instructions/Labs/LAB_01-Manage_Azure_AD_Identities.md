@@ -68,10 +68,10 @@ Save this information for your future use in the course.
 ![image](../media/lab1-8.png)
 >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the subscription is activated.
 
-6. From the screenshot above email mentioned under Administrator is your username.
-7. Save your username and password created for future use in the course. 
+7. From the screenshot above email mentioned under Administrator is your username.
+8. Save your username and password created for future use in the course. 
 
-7. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
+9. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
 
  >**Note**: In this course  username and password saved will be reffered as Azure Developer credentials.
 
