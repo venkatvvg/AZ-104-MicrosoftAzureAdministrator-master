@@ -164,7 +164,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the **Authoring** section, click **Assignments**. 
 
-1. In the list of assignments, click the ellipsis icon (3 dots) in the row representing the **Require Role tag with UCID value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+1. In the list of assignments, click the ellipsis icon (3 dots) in the row representing the **Require Role tag with UCID value <6+2>policy** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -182,6 +182,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Assignment name | **Inherit the UCID tag and its <6+2> value from the resource group if missing**|
     | Description | **Inherit the UCID tag and its <6+2> value from the resource group if missing**|
     | Policy enforcement | Enabled |
+    | Assigned by | <6+2> |
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
