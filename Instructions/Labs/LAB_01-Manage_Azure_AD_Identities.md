@@ -73,7 +73,7 @@ Save this information for your future use in the course.
 
 7. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
 
- >**Note**: In this course this username and email will be reffered as Azure Developer credentials.
+ >**Note**: In this course  username and password saved will be reffered as Azure Developer credentials.
 
 
 
