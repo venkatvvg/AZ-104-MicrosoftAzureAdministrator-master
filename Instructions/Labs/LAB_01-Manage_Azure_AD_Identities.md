@@ -65,7 +65,7 @@ Save this information for your future use in the course.
 
 6. Save your username and password for future use in the course. You will be asked for recovery phone when you click continue, once you verify your phone number and click setup you subscription will be activated and see the screen as below, it will create additional users for your use at this stage. 
 
-7. Open a private browser and Sign in to the [Azure portal](https://portal.azure.com) in new tab and login using the email and password saved in the above step. You will use this account to complete tasks below.
+7. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
 
 ![image](../media/lab1-8.png)
 
