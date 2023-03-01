@@ -60,7 +60,6 @@ Save this information for your future use in the course.
 ![image](../media/lab1-6.png)
 
 5. Use your 6+2 as your username in my case it is mandalrt, give a password that you will remember
-
 ![image](../media/lab1-7.png)
 
 6. You will be asked for recovery phone when you click continue, once you verify your phone number and click setup you subscription will be activated and see the screen as below, it will create additional users for your use at this stage. 
@@ -94,7 +93,7 @@ In this task, you will create and configure Azure AD users.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
+1. Click **Edit properties**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
