@@ -33,7 +33,7 @@ In this lab, you will:
 >**Note**: Through out the lab replace <6+2> with you UC Id. (In my case mandalrt)
 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 90 minutes
 
 ## Architecture diagram
 ![image](../media/lab1-1.png)
