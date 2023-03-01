@@ -259,7 +259,7 @@ In this task, you will create a new Azure AD tenant.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the <6+2>lab tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the Azure portal displaying the <6+2>lab tenant, navigate to the Active directory and in the **Manage** section, click **Users**, and then click **+ New user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
