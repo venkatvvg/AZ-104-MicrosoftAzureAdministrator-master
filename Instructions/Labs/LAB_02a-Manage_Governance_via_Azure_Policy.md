@@ -67,7 +67,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
     ```
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
-    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage accounts** you created.
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage account** you created.
 
 1. On the storage account blade, click the link resource group name link.
 
@@ -163,7 +163,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with UCID value**. The deployment failed because the storage account you attempted to create did not have a tag named **UCID** with its value set to **<6+2>**.
 
-    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the error during deployment.
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the error you received during deployment.
 
 #### Task 3: Apply tagging via an Azure policy
 
@@ -236,7 +236,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **UCID** with the value **<6+2>** has been automatically assigned to the resource.
 
->**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **AStorage account** you created with the tag added.
+>**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage account** you created with the tag added.
 
 #### Review
 
