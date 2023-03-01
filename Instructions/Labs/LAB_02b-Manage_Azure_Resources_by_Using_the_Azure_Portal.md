@@ -42,13 +42,19 @@ In this task, you will use the Azure portal to create resource groups and create
     |Setting|Value|
     |---|---|
     |Subscription| the name of the Azure subscription where you created the resource group |
-    |Resource Group| the name of a new resource group **<6+2>-az104-03a-rg1** |
-    |Disk name| **<6+2>-az104-03a-disk1** |
+    |Resource Group| the name of a new resource group **<6+2>-az104-02b-rg1** |
+    |Disk name| **<6+2>-az104-02b-disk1** |
     |Region| **(US) East US** |
     |Availability zone| **None** |
     |Source type| **None** |
 
     >**Note**: When creating a resource, you have the option of creating a new resource group or using an existing one.
+
+
+
+1. On the Disk SKU Select **Standard HDD**
+
+    >**Note**: Make sure you select standard HDD with 32GB
 
 1. Change the disk type and size to **Standard HDD** and **32 GiB**, respectively.
 
