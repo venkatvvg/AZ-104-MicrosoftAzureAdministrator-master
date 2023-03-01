@@ -253,6 +253,8 @@ In this task, you will create a new Azure AD tenant.
 
     >**[Screenshot 7](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the newly created azure tenant.
 
+1. Click switch across the newly created tennent.
+
 #### Task 4: Manage Azure AD guest users.   (15 points)
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
