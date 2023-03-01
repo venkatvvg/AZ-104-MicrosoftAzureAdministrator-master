@@ -72,7 +72,7 @@ Save this information for your future use in the course.
 
 ### Exercise 1
 
-#### Task 1: Create and configure Azure AD users
+#### Task 1: Create and configure Azure AD users    (15 points)
 
 In this task, you will create and configure Azure AD users.
 
@@ -143,7 +143,7 @@ In this task, you will create and configure Azure AD users.
 
 1. Sign out as the <6+2>-az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-#### Task 2: Create Azure AD groups with assigned and dynamic membership
+#### Task 2: Create Azure AD groups with assigned and dynamic membership    (15 points)
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
@@ -216,7 +216,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the User 2 name added to IT system administrator.
 
-#### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
+#### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)    (15 points)
 
 In this task, you will create a new Azure AD tenant.
 
@@ -244,7 +244,7 @@ In this task, you will create a new Azure AD tenant.
 
     >**[Screenshot 7](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the newly created azure tenant.
 
-#### Task 4: Manage Azure AD guest users.
+#### Task 4: Manage Azure AD guest users.   (15 points)
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
@@ -294,7 +294,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     >**[Screenshot 10](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing members of IT Lab Administrators.
 
 
-#### Task 5: Manage Azure AD guest user from University of Cincinnati.
+#### Task 5: Manage Azure AD guest user from University of Cincinnati.  (40 points)
 
 1. Verify the architecture diagram and understand the requirement for task 5. 
 
