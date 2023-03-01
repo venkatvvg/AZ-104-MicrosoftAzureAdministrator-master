@@ -67,6 +67,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
     ```
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage accounts** you created.
 
 1. On the storage account blade, click the link resource group name link.
 
@@ -80,6 +81,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
     | --- | --- |
     | Name | **UCID** |
     | Value | **<your 6+2>** Eg: mandalrt |
+
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of your **Resource Group** with tag created.
 
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
@@ -132,6 +135,10 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
+1. Navigate to **Policy**, under Authoring navigate to Assignments Blade 
+
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the **Assignment Name** you created under the Assignment Blade.
+
 1. Navigate back to the blade of the resource group <6+2>rg hosting the storage account, which you created in the previous task.
 
 1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
@@ -155,6 +162,8 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with UCID value**. The deployment failed because the storage account you attempted to create did not have a tag named **UCID** with its value set to **<6+2>**.
+
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the error during deployment.
 
 #### Task 3: Apply tagging via an Azure policy
 
@@ -205,6 +214,10 @@ In this task, we will use a different policy definition to remediate any non-com
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
+1. Navigate to **Policy**, under Authoring navigate to Assignments Blade 
+
+    >**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the **Assignment Name** you created under the Assignment Blade.
+
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
 1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
@@ -214,7 +227,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Resource Group | your <6+2>rg |
-    | Storage account name | <6+2>storage1 eg:mandalrtstorage2 |
+    | Storage account name | <6+2>storage1 eg:mandalrtstorage1 |
     | Region | Default (US) East US|
     | Perfromace | **Standard** |
     | Redundacy | Local Redudant Storage (LRS) | 
@@ -222,6 +235,8 @@ In this task, we will use a different policy definition to remediate any non-com
 1. Verify that this time the validation passed and click **Create**.
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **UCID** with the value **<6+2>** has been automatically assigned to the resource.
+
+>**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **AStorage account** you created with the tag added.
 
 #### Review
 
