@@ -65,6 +65,7 @@ Save this information for your future use in the course.
 
 6. You will be asked for recovery phone when you click continue, once you verify your phone number and click setup you subscription will be activated and see the screen as below, it will create additional users for your use at this stage. 
 
+![image](../media/lab1-8.png)
 >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the subscription is activated.
 
 6. From the screenshot above email mentioned under Administrator is your username.
@@ -73,8 +74,8 @@ Save this information for your future use in the course.
 7. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
 
  >**Note**: In this course this username and email will be reffered as Azure Developer credentials.
- 
-![image](../media/lab1-8.png)
+
+
 
 
 
