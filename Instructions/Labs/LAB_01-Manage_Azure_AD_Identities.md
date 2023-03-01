@@ -319,12 +319,12 @@ Department: **IT**
 
 1. You are required to invite UC user to your organization for this exercise you will use your UC mail for inviting.
 
-     >**[Screenshot 10](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the properties of the user added.
+     >**[Screenshot 11](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the properties of the user added.
 
 
-    >**[Screenshot 11](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the assigned roles 
+    >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the assigned roles 
 
-     >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the list of users in the group to which the external user was added. 
+     >**[Screenshot 13](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Show the list of users in the group to which the external user was added. 
 
 
 
