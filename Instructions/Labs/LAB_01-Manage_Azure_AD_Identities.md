@@ -225,7 +225,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md)**: Showing the User 2 name added to IT system administrator.
 
-#### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)    (15 points)
+#### Task 3: Create an Azure Active Directory (AD) tenant    (15 points)
 
 In this task, you will create a new Azure AD tenant.
 
