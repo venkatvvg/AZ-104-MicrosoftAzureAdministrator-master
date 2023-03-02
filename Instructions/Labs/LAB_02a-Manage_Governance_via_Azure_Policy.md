@@ -141,7 +141,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource Group | your <6+2>rg |
     | Storage account name | <6+2>storage1 eg:mandalrtstorage1 |
     | Region | Default (US) East US|
-    | Perfromace | **Standard** |
+    | Perforomace | **Standard** |
     | Redundacy | Local Redudant Storage (LRS) | 
 
     >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason for the failure and skip the next step. 
@@ -163,8 +163,6 @@ In this task, we will use a different policy definition to remediate any non-com
 1. In the Azure portal, search for and select **Policy**. 
 
 1. In the **Authoring** section, click **Assignments**. 
-
-1. In the list of assignments, click the ellipsis icon (3 dots) in the row representing the **Require Role tag with UCID value <6+2>policy** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -227,7 +225,9 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **UCID** with the value **<6+2>** has been automatically assigned to the resource.
 
->**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage account** you created with the tag added.
+    >**Note**: If you have observed in Task 2, you enforced taging and when you tried creating a tag policy stopped you from creating the resource since you didn't specify the Tag. In Task 3 you applied tagging via policy, now when you create the resouce again without the tag you were able to sucessfully deploy it as the tag was auto assigned.
+
+    >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage account** you created with the tag added.
 
 #### Review
 
