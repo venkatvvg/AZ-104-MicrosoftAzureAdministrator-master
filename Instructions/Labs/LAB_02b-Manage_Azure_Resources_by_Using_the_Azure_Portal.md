@@ -104,7 +104,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Click **Go to resource**.
 
-    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2** you Moved.
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2**.
 
 
 1. On the Overview page of the Disk, click the name of the resource group, **<6+2>-az104-02b-rg3**.
@@ -134,7 +134,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
     
-    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2** you Moved.
+    >**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2**.
 
 #### Review
 
