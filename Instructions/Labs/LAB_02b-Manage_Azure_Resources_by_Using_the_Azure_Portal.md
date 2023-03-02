@@ -51,7 +51,6 @@ In this task, you will use the Azure portal to create resource groups and create
     >**Note**: When creating a resource, you have the option of creating a new resource group or using an existing one.
 
 
-
 1. Under the Disk Details -> Size ->Select **Change size** -> Disk SKU -> **Standard HDD** -> 32GB
 
     >**Note**: Make sure you select standard HDD with 32GB
@@ -61,6 +60,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. Click **Review + Create** and then click **Create**.
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
+     >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk1** you created.
 
 #### Task 2: Move resources between resource groups 
 
@@ -77,6 +77,7 @@ In this task, we will move the disk resource you created in the previous task to
 1. Below the **Resource group** text box, click **Create new** then type **<6+2>-az104-02b-rg2** in the text box and click Next (Wait till the change gets validated), Click next to move to the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk1** you Moved.
 
 #### Task 3: Implement resource locks
 
@@ -101,6 +102,9 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Click **Go to resource**.
 
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2** you Moved.
+
+
 1. On the Overview page of the Disk, click the name of the resource group, **<6+2>-az104-02b-rg3**.
 
 1. On the **<6+2>-az104-02b-rg3** resource group blade, click **Locks** then **+ Add** and specify the following settings:
@@ -114,18 +118,20 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. On the **<6+2>-az104-02b-rg3** resource group blade, click **Overview**, in the list of resource group resources, select the entry representing the disk you created earlier in this task, and click **Delete** in the toolbar. 
 
-1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **yes** and click **Delete**.
+1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **delete** and click **Delete**.
 
 1. You should see an error message, notifying about the failed delete operation. 
 
     >**Note**: As the error message states, this is expected due to the delete lock applied on the resource group level.
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the error you received when trying to delete the **Disk 6+2>-az104-02b-disk2**.
 
 1. Navigate back to the list of resources of the **<6+2>-az104-02b-rg3** resource group and click the entry representing the **<6+2>-az104-02b-disk2** resource. 
 
 1. Navigate to **<6+2>-az104-02b-disk2**, in the **Settings** section, click **Size + performance**, change **Disk SKU** to **Premium SSD** and size as **64 GiB**, respectively, and click **Save** to apply the change. Verify that the change was successful.
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
-
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2** you Moved.
+    
 #### Review
 
 In this lab, you have:
