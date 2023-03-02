@@ -93,7 +93,9 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Availability zone| **None** |
     |Source type| **None** |
 
-1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
+1.  Under the Disk Details -> Size ->Select **Change size** -> Disk SKU -> **Standard HDD** -> 32GB
+
+    >**Note**: Make sure you select standard HDD with 32GB
 
 1. Click **Review + Create** and then click **Create**.
 
