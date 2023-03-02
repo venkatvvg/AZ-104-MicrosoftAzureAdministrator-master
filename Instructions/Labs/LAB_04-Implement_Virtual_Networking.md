@@ -48,37 +48,53 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | the name of a **new** resource group **az104-04-rg1** |
-    | Name | **az104-04-vnet1** |
-    | Region | the name of any Azure region available in the subscription you will use in this lab |
+    | Resource Group | Create New -> **<6+2>-az104-04-rg1** |
+    | Name | **<6+2>-az104-04-vnet1** |
+    | Region | East US |
 
-1. Click **Next : IP Addresses** and delete the existing **IPv4 address space**. In the **IPv4 address space** textbox type in **10.40.0.0/20**.
+1. Click **Next : IP Addresses** and delete the existing **IPv4 address space**. 
+
+1. Click Add an IP Address space**IPv4 address space** enter the following values then click **Add**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Address space type | **IPV4** |
+    | Starting address | **10.40.0.0** |
+    | Address space size | **20(4096 Addresses** |
 
 1. Click **+ Add subnet** enter the following values then click **Add**.
 
     | Setting | Value |
     | --- | --- |
+    | Subnet template | **Default** |
     | Subnet name | **subnet0** |
-    | Subnet address range | **10.40.0.0/24** |
+    | Starting Address | **10.40.0.0** |
+    | Subnet size | **/24(256 Addresses)** |
 
 1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
-1. Click on **Go to resource**
+1. Click on **Go to resource** wait until the deployement finishes.
 
-1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
+>**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Showing the overview of <6+2>-az104-04-vnet1.
+
+
+1. On the **<6+2>-az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
 
 1. Create a subnet with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Name | **subnet1** |
-    | Address range (CIDR block) | **10.40.1.0/24** |
+    | Subnet Address range (CIDR block) | **10.40.1.0/24** |
+    | NAT Gateway | **None** |
     | Network security group | **None** |
     | Route table | **None** |
 
 1. Click **Save**
+
+>**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Displaying 2 subnets on the subnet overview page of <6+2>-az104-04-vnet1.
 
 #### Task 2: Deploy virtual machines into the virtual network
 
@@ -88,9 +104,21 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+1. From the Cloud Shell pane, click advanced settings using following:
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
+   ```powershell
+   Resource Group -> Use existing -> <6+2>-az-104-rg1   eg:madalrt-az-104-rg1 
+   ```
+   ```powershell
+   Storage Account -> Create New -> <6+2>04storage eg:madalrt04storage 
+   ```
+   ```powershell
+   File Share -> Create New -> <6+2>04fs  eg:madalrt04fs  
+   ```
+    >**Note**: If powershell open automatically click Settings --> Reset user settings**.
+
+
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json](https://drive.google.com/file/d/1q294EInD_cmlPU072bsXwJ_7bHEIyJ5c/view?usp=share_link)** and **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json](https://drive.google.com/file/d/1yMd3CPpJat9vesxJycd40kviSX58NjfV/view?usp=share_link)** into the Cloud Shell home directory.
 
     >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
@@ -99,13 +127,17 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
    ```powershell
-   $rgName = 'az104-04-rg1'
-
+   $rgName = '<6+2>-az104-04-rg1'
+   ```
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
+   
+   >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Terminal Output of successful run of the template deployement.
+
 
     >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
