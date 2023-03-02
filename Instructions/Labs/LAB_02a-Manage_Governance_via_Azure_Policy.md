@@ -56,15 +56,6 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ```powershell
    File Share -> Create New -> <6+2>fs  eg:madalrtfs  
    ```
-   
-    ```
-   # This program prints Hello, world!
-    print('Hello, world!')
-    ```
-    ```python
-   # This program prints Hello, world!
-    print('Hello, world!')
-    ```
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you created in the previous step. (<6+2>storage) 
     >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the overview of **Storage account** you created.
