@@ -74,7 +74,7 @@ In this task, we will move the disk resource you created in the previous task to
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Below the **Resource group** text box, click **Create new** then type **<6+2>-az104-02b-rg2** in the text box. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
+1. Below the **Resource group** text box, click **Create new** then type **<6+2>-az104-02b-rg2** in the text box and click Next (Wait till the change gets validated), Click next to move to the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
@@ -87,8 +87,8 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Setting|Value|
     |---|---|
     |Subscription| the name of the subscription you are using in this lab |
-    |Resource Group| click **create new** resource group and name it **az104-03a-rg3** |
-    |Disk name| **az104-03a-disk2** |
+    |Resource Group| click **create new** resource group and name it **<6+2>-az104-02b-rg3** |
+    |Disk name| **<6+2>-az104-02b-disk2** |
     |Region| the name of the Azure region where you created the other resource groups in this lab |
     |Availability zone| **None** |
     |Source type| **None** |
