@@ -35,7 +35,7 @@ In this lab, we will:
 
 In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. In the Azure portal, search for and select **Disks**, click **+ Create** and specify the following settings:
 
@@ -131,7 +131,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
     >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02b-Manage_Azure_Resources_by_Using_the_Azure_Portal.md)**: Show the overview of **Disk <6+2>-az104-02b-disk2** you Moved.
-    
+
 #### Review
 
 In this lab, you have:
