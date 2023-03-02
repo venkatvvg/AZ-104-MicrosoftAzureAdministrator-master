@@ -68,13 +68,13 @@ In this task, we will move the disk resource you created in the previous task to
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click the entry representing the **<6+2>az104-03b-rg1** resource group you created in the previous task.
+1. On the **Resource groups** blade, click the entry representing the **<6+2>-az104-02b-rg1** resource group you created in the previous task.
 
 1. From the **Overview** blade of the resource group, in the list of resource group resources, select the entry representing the newly created disk, click **Move** in the toolbar, and, in the drop-down list, select **Move to another resource group**.
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Below the **Resource group** text box, click **Create new** then type **az104-03a-rg2** in the text box. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
+1. Below the **Resource group** text box, click **Create new** then type **<6+2>-az104-02b-rg2** in the text box. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
