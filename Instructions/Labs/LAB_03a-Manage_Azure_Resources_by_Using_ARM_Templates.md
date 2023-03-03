@@ -137,7 +137,7 @@ In this lab, you will:
 
 1. From the **<6+2>-az104-03-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the content of the **Input** and **Template** blades of  **<6+2>-az104-03a-rg1 - Deployments** 
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the content of the **Input** and **Template** blades of  **<6+2>-az104-03-rg1 - Deployments** 
 
 In this lab, you have:
 
