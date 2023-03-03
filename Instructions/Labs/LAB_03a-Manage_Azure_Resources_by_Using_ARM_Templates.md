@@ -1,10 +1,10 @@
 ---
 lab:
-    title: '03a - Manage Azure resources by Using ARM Templates'
+    title: '03 - Manage Azure resources by Using ARM Templates'
     module: 'Administer Azure Resources'
 ---
 
-# Lab 03a - Manage Azure resources by Using ARM Templates
+# Lab 03 - Manage Azure resources by Using ARM Templates
 # Student lab manual
 
 ## Lab scenario
@@ -26,7 +26,7 @@ In this lab, you will:
 
 ![image](../media/lab03b.png)
 
-## Challenge: (30 Points)
+## Challenge: (50 Points)
 1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. Create Disk with following settings:
@@ -47,7 +47,7 @@ In this lab, you will:
 
     >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03ch-disk1** you created.
 
-## Instructions (20 Points)
+## Instructions (50 Points)
 
 ### Exercise 1
 
