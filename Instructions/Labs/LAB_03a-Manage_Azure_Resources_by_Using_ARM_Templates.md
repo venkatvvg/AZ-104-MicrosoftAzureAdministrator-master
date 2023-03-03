@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '03b - Manage Azure resources by Using ARM Templates'
+    title: '03a - Manage Azure resources by Using ARM Templates'
     module: 'Administer Azure Resources'
 ---
 
@@ -20,6 +20,27 @@ In this lab, you will:
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
+## Challenge:
+1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
+
+1. Create Disk with following settings:
+
+1.  |Setting|Value|
+    |---|---|
+    |Subscription| the name of the Azure subscription where you created the resource group |
+    |Resource Group| the name of a new resource group **<6+2>-az104-03ch-rg1** |
+    |Disk name| **<6+2>-az104-03ch-disk1** |
+    |Region| **(US) East US** |
+    |Availability zone| **None** |
+    |Source type| **None** |
+    |Size| **Standard HDD 32GB** |
+
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03ch-disk1** you created.
+
+1. Move the Disk created in **<6+2>-az104-03ch-rg1** to **<6+2>-az104-03ch-rg2** 
+
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03ch-disk1** you created.
+
 ## Estimated timing: 20 minutes
 
 ## Architecture diagram
@@ -32,15 +53,13 @@ In this lab, you will:
 
 #### Task 1: Review an ARM template for deployment of an Azure managed disk
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
-
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03a-rg1**.
+1. In the list of resource groups, select **<6+2>-az104-03ch-rg1**.
 
-1. On the **az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **<6+2>-az104-03ch-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments.
+1. On the **<6+2>-az104-03ch-rg1 - Deployments** blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
@@ -53,8 +72,6 @@ In this lab, you will:
 1. Note the value of the **location** parameter. You will need it in the next task.
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
-
-    >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
     
 1. Close all **File Explorer** windows.
 
@@ -94,9 +111,9 @@ In this lab, you will:
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | the name of a **new** resource group **az104-03b-rg1** |
+    | Resource Group | the name of a **new** resource group **<6+2>-az104-03a-rg1** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
-    | Disk Name | **az104-03b-disk1** |
+    | Disk Name | **<6+2>-az104-03a-disk1** |
     | Location | the value of the location parameter you noted in the previous task |
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
@@ -108,21 +125,19 @@ In this lab, you will:
 
 1. Verify that the deployment completed successfully.
 
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03a-disk1** you created.
+
 #### Task 3: Review the ARM template-based deployment of the managed disk
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1**.
+1. In the list of resource groups, click **<6+2>-az104-03a-rg1**.
 
-1. On the **az104-03b-rg1** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **<6+2>-az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **az104-03b-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **<6+2>-az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-#### Clean up resources
-
-   >**Note**: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
-
-#### Review
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the content of the **Input** and **Template** blades of  **<6+2>-az104-03a-rg1 - Deployments** 
 
 In this lab, you have:
 
