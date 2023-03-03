@@ -111,9 +111,9 @@ In this lab, you will:
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | the name of a **new** resource group **<6+2>-az104-03a-rg1** |
+    | Resource Group | the name of a **new** resource group **<6+2>-az104-03-rg1** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
-    | Disk Name | **<6+2>-az104-03a-disk1** |
+    | Disk Name | **<6+2>-az104-03-disk1** |
     | Location | the value of the location parameter you noted in the previous task |
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
@@ -125,17 +125,17 @@ In this lab, you will:
 
 1. Verify that the deployment completed successfully.
 
-    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03a-disk1** you created.
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03-disk1** you created.
 
 #### Task 3: Review the ARM template-based deployment of the managed disk
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **<6+2>-az104-03a-rg1**.
+1. In the list of resource groups, click **<6+2>-az104-03-rg1**.
 
-1. On the **<6+2>-az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **<6+2>-az104-03-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **<6+2>-az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **<6+2>-az104-03-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
     >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the content of the **Input** and **Template** blades of  **<6+2>-az104-03a-rg1 - Deployments** 
 
