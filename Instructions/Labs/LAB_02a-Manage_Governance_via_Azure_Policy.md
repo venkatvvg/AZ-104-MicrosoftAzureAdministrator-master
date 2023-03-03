@@ -120,7 +120,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: This setting can be used when the policy or initiative includes the **deployIfNotExists** or **Modify** effect.
 
-1. Click **Review + Create** and then click **Create**.
+1. Click **Review** and then click **Create**.
 
     >**Note**: Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
@@ -144,17 +144,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Perforomace | **Standard** |
     | Redundacy | Local Redudant Storage (LRS) | 
 
-    >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason for the failure and skip the next step. 
+1. click **Review**
 
-1. click **Review** and then click **Create**
-
-1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
-
-    >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
+    >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason. Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with UCID value**. The deployment failed because the storage account you attempted to create did not have a tag named **UCID** with its value set to **<6+2>**.
 
-    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the error you received during deployment.
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_02a-Manage_Governance_via_Azure_Policy.md)**: Show the error reason you received during deployment.
 
 #### Task 3: Apply tagging via an Azure policy
 
