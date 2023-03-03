@@ -40,13 +40,9 @@ In this lab, you will:
 
 ## Instructions
 
-1. Create a new Microsoft email at Create account (live.com)
-Email: <6+2>@outlook.com example: mandalrt@outlook.com
-Password: Give as per your choice
-First name and Last name as per the registration at UC.
-Save this information for your future use in the course.
+1. Create a new Microsoft email at live.com in Email format <6+2>@outlook.com example: mandalrt@outlook.com, Password: Give as per your choice. Save this information for your future use in the course.
 
-2. Join the Microsoft 365 Developer Program using the email created at [Developer Program | Microsoft 365 Dev Center by clicking Join](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+2. Join the Microsoft 365 Developer Program using the email created in above step [Developer Program | Microsoft 365 Dev Center by clicking Join](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
 
 3. You will need to give below details to begin with, use ‘<6+2>Dev’ as your company in my case it was ‘mandalrtDev’
 
@@ -69,6 +65,7 @@ Save this information for your future use in the course.
 
 7. From the screenshot above email mentioned under Administrator is your username.
 8. Save your username and password created for future use in the course. 
+
 
 9. Open [Azure portal](https://portal.azure.com) in a private browser and login using the email and password saved in the above step. You will use this account to complete tasks below.
 
