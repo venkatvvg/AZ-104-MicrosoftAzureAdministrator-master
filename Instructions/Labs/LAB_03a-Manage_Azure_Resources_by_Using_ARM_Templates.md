@@ -20,7 +20,13 @@ In this lab, you will:
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
-## Challenge:
+## Estimated timing: 30 minutes
+
+## Architecture diagram
+
+![image](../media/lab03b.png)
+
+## Challenge: (30 Points)
 1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. Create Disk with following settings:
@@ -41,13 +47,7 @@ In this lab, you will:
 
     >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_03a-Manage_Azure_Resources_by_Using_ARM_Templates.md)**: Show the overview of **Disk <6+2>-az104-03ch-disk1** you created.
 
-## Estimated timing: 20 minutes
-
-## Architecture diagram
-
-![image](../media/lab03b.png)
-
-## Instructions
+## Instructions (20 Points)
 
 ### Exercise 1
 
