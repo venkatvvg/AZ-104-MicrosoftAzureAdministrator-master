@@ -130,7 +130,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Navigate back to the list of resources of the **<6+2>-az104-02b-rg3** resource group and click the entry representing the **<6+2>-az104-02b-disk2** resource. 
 
-1. Navigate to **<6+2>-az104-02b-disk2**, in the **Settings** section, click **Size + performance**, change **Disk SKU** to **Premium SSD** and size as **64 GiB**, respectively, and click **Save** to apply the change. Verify that the change was successful.
+1. Navigate to **<6+2>-az104-02b-disk2**, in the **Settings** section, click **Size + performance**, change **Disk SKU** to **Standard HDD** and size as **64 GiB**, respectively, and click **Save** to apply the change. Verify that the change was successful.
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
     
