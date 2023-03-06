@@ -68,7 +68,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
    ```
    
    ```powershell
-   $rgName = 'az104-11-rg0'
+   $rgName = '<6+2>-az104-11-rg0'
    ```
    
    ```powershell
