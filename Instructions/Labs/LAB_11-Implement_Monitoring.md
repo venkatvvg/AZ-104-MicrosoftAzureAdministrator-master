@@ -46,7 +46,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
-1. Select **Show advanced settings** and make shure your cloud shell region is set to **East US** then create a storage account with below configurations by selecting create new
+1. Select **Show advanced settings** and select your cloud shell region as **East US** then create a storage account with below configurations by selecting create new
 | Settings | Value |
     | --- | --- |
     | Resource Group | **<6+2>-AZ104-11s-rg** |
