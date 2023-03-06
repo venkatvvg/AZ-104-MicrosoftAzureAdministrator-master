@@ -42,21 +42,20 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Use existing -> <6+2>-az-104-rg1   eg:madalrt-az-104-rg1 
+   Resource Group -> Use existing -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
    ```
    ```powershell
-   Storage Account -> Create New -> <6+2>04storage eg:madalrt04storage 
+   Storage Account -> Create New -> <6+2>04storage eg:madalrt05storage 
    ```
    ```powershell
-   File Share -> Create New -> <6+2>04fs  eg:madalrt04fs  
+   File Share -> Create New -> <6+2>04fs  eg:madalrt05fs  
    ```
-    >**Note**: If powershell open automatically click Settings --> Reset user settings**.
+    >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Allfiles/Labs/05/az104-05-vnetvm-loop-template.json)** and **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Allfiles/Labs/05/az104-05-vnetvm-loop-parameters.json)** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json](https://drive.google.com/file/d/1M48OGV42tyWxg5ud0Ze2MLq9Lo-YiBVL/view?usp=sharing)** and **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json](https://drive.google.com/file/d/1QGt3DEwz7XcOO7EcZiStpON4d9yEPjoL/view?usp=sharing)** into the Cloud Shell home directory.
 
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in [Azure_region_1]. The third virtual network and the third virtual machine will be deployed in the same resource group but another [Azure_region_2]. (replace the [Azure_region_1] and [Azure_region_2] placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines. An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
 
