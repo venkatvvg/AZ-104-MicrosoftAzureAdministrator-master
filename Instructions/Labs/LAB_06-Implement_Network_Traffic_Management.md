@@ -306,6 +306,8 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the confirmation that the command completed successfully.
 
+   >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Display the output of Run Command script showing success.
+
 1. On the **Run Command Script** blade, type the following and click **Run** to install the Routing role service.
 
    ```powershell
