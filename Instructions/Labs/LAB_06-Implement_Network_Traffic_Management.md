@@ -43,15 +43,26 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1.In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+1. From the Cloud Shell pane, click advanced settings using following:
+
+   ```powershell
+   Resource Group -> Use existing -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
+   ```
+   ```powershell
+   Storage Account -> Create New -> <6+2>04storage eg:madalrt05storage 
+   ```
+   ```powershell
+   File Share -> Create New -> <6+2>04fs  eg:madalrt05fs  
+   ```
+    >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
+
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json](https://drive.google.com/file/d/1tw80Djo5r7J6HmGUmr65ZPY27fdfLoiq/view?usp=sharing)** and **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json](https://drive.google.com/file/d/16GZ47cLSt44HLYjnkoFHCU7uMxgLtP85/view?usp=share_link)** into the Cloud Shell home directory.
-
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
