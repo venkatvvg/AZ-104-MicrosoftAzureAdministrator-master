@@ -421,6 +421,24 @@ In this task, you will configure external DNS name resolution by using Azure pub
     >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output which show both DNS connections of VM0 & VM1
 
 
+
+#### Clean up resources
+
+>**Note**: Remember to remove the resource group that you created.
+
+
+1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+
+1. Delete all resource groups you created throughout the labs of this module by running the following command:
+
+   ```powershell
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
+   ```
+
+    >**Note**: The command executes and takes some time for the execution.
+    >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output True
+
+
 #### Review
 
 In this lab, you have:
