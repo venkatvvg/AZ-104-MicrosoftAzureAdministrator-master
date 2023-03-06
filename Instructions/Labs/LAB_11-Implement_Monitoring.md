@@ -53,9 +53,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Storage Account | **<6+2>-AZ104-11s-sa** |
     | File Share | **<6+2>-AZ104-11s-fs** |
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/1OgXan7w6K9iz1eeffsna3tm9hZ8vy0QR/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1UxA_ZUA8PI_GtDaS7kryOSpzJQ7F8MAz/view?usp=sharing)** into the Cloud Shell home directory.
+1. Download the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/1OgXan7w6K9iz1eeffsna3tm9hZ8vy0QR/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1UxA_ZUA8PI_GtDaS7kryOSpzJQ7F8MAz/view?usp=sharing)** 
 
-1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+1. Edit the Parameters file using notepad you just uploaded and change the password. If you need help editing the file in the Shell please ask your TA for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
 
