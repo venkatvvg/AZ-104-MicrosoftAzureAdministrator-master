@@ -107,7 +107,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Use existing -> <6+2>-az-104-rg1   eg:madalrt-az-104-rg1 
+   Resource Group -> Use existing -> <6+2>-az-104-04-rg1   eg:madalrt-az-104-04-rg1 
    ```
    ```powershell
    Storage Account -> Create New -> <6+2>04storage eg:madalrt04storage 
