@@ -126,14 +126,16 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     | Settings | Value |
     | --- | --- |
-    | Automation account name | any unique name |
+    | Automation account name | **<6+2>-az104-11-aa**|
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-11-rg1**|
-    | Region | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
+    | Region | East US |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
+
+>**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_11-Implement_Monitoring.md)**: Showing the overview of <6+2>-az104-11-rg1.
 
 1. Click **Go to resource**.
 
@@ -148,6 +150,8 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 1. On the Automation account blade, in the **Update Management** section, click **Update management** and click **Enable**.
 
     >**Note**: Wait for the installation to complete. This might take about 5 minutes.
+
+>**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_11-Implement_Monitoring.md)**: Showing the **Update Management** blade after Enabling.
 
 #### Task 4: Review default monitoring settings of Azure virtual machines
 
