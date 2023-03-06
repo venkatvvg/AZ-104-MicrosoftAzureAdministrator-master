@@ -99,6 +99,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
+    
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_05-Implement_Intersite_Connectivity.md)**: Show the successful run of the cloud shell resource group deployement.
 
 1. Close the Cloud Shell pane.
 
@@ -106,9 +108,17 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
-1. In the Azure portal, search for and select **Virtual networks**.
+1. In the Azure portal, search for and select **Resource Groups**.
 
-1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
+1. Review the resource group you created in the previous task 
+    
+1. Check the virtual networks and verify that the first two (az-104-05-vnet0, az104-05-vnet1) are located in the same Azure region (East US) and the third one (az104-05-vnet2) in a different Azure region (West US).
+    
+1. Click az104-05-vnet0, in the **settings** section, click **properties**, copy the resource ID and paste it in a notepad we will be using this resource ID in next steps.
+    
+1. Repeat the above steps for az104-05-vnet1 & az104-05-vnet2.
+    
+    >**Example of Resource ID**: /subscriptions/12351f3d-xxxx-xxxx-xxxx-fc359ee9xxxx/resourceGroups/xxxxxx-az104-05-rg1/providers/Microsoft.Network/virtualNetworks/az104-05-vnet0.
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
@@ -120,15 +130,14 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
+    | This virtual network: Peering link name | **<6+2>-az104-05-vnet0_to_az104-05-vnet1** |
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet1** |
+    | I know my resource ID | **selected** |
+    | Resource ID | Resource ID of vnet1 (The ID is copied is previous step) |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
@@ -157,7 +166,7 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
+    | This virtual network: Peering link name | **<6+2>-az104-05-vnet0_to_az104-05-vnet2** |
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
