@@ -39,13 +39,19 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+1. Select **Show advanced settings** and make shure your cloud shell region is set to **East US** then create a storage account with below configurations by selecting create new
+| Settings | Value |
+    | --- | --- |
+    | Resource Group | **<6+2>-AZ104-11s-rg** |
+    | Storage Account | **<6+2>-AZ104-11s-sa** |
+    | File Share | **<6+2>-AZ104-11s-fs** |
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/1OgXan7w6K9iz1eeffsna3tm9hZ8vy0QR/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1UxA_ZUA8PI_GtDaS7kryOSpzJQ7F8MAz/view?usp=sharing)** into the Cloud Shell home directory.
 
