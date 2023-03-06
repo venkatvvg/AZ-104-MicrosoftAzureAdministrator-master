@@ -49,9 +49,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Select **Show advanced settings** and select your cloud shell region as **East US** then create a storage account with below configurations by selecting create new
 | Settings | Value |
     | --- | --- |
-    | Resource Group | **<6+2>-AZ104-11s-rg** |
-    | Storage Account | **<6+2>-AZ104-11s-sa** |
-    | File Share | **<6+2>-AZ104-11s-fs** |
+    | Resource Group | **<6+2>-az104-11s-rg** |
+    | Storage Account | **<6+2>-az104-11s-sa** |
+    | File Share | **<6+2>-az104-11s-fs** |
 
 1. Download the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/1OgXan7w6K9iz1eeffsna3tm9hZ8vy0QR/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1UxA_ZUA8PI_GtDaS7kryOSpzJQ7F8MAz/view?usp=sharing)** 
 
@@ -87,6 +87,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
 
+>**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_11-Implement_Monitoring.md)**: Showing the overview of <6+2>-az104-11-rg0.
+
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
@@ -109,7 +111,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     | Settings | Value |
     | --- | --- |
-    | Subscription | **CECH SoIT Bootcamp** |
+    | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **<6+2>-az104-11-rg1** |
     | Log Analytics Workspace Name | **<6+2>-az104-11-law** |
     | Region | **East US** |
@@ -126,7 +128,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | --- | --- |
     | Automation account name | any unique name |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-11-rg1** |
+    | Resource group | **<6+2>-az104-11-rg1**|
     | Region | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
