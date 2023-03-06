@@ -50,13 +50,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Use existing -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
+   Resource Group -> Use existing -> <6+2>-az-104-06-rg1   eg:madalrt-az-104-06-rg1 
    ```
    ```powershell
-   Storage Account -> Create New -> <6+2>04storage eg:madalrt05storage 
+   Storage Account -> Create New -> <6+2>06storage eg:madalrt06storage 
    ```
    ```powershell
-   File Share -> Create New -> <6+2>04fs  eg:madalrt05fs  
+   File Share -> Create New -> <6+2>06fs  eg:madalrt06fs  
    ```
     >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
 
@@ -79,8 +79,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     ```powershell
     New-AzResourceGroup -Name $rgName -Location $location
     ```
-    
-    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Showing the output of the new resource group creating on PowerShell.
+    >**Note**: Error Provided resource group already exists, this is due to resource group created during storage account creation **Click Y**.
+
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Showing the output of the resource group updation on PowerShell.
 
 
 
@@ -135,9 +136,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
 
-1. In the Azure portal, search for and select **Virtual networks**.
+1. In the Azure portal, search for and select **Resource Groups**.
 
-1. Review the virtual networks you created in the previous task.
+1. Review the virtual networkson the resource group that you created in the previous task.
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
@@ -165,11 +166,11 @@ In this task, you will configure local peering between the virtual networks you 
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
+    | This virtual network: Peering link name | **<6+2>-az104-06-vnet01_to_az104-06-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
-    | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
+    | Remote virtual network: Peering link name | **<6+2>-az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
@@ -189,11 +190,11 @@ In this task, you will configure local peering between the virtual networks you 
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
+    | This virtual network: Peering link name | **ghantavk-az104-06-vnet01_to_az104-06-vnet3** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
-    | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
+    | Remote virtual network: Peering link name | **ghantavk-az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
@@ -225,7 +226,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **<6+2>-az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
