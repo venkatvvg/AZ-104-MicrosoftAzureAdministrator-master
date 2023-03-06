@@ -39,6 +39,19 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
+1. From the Cloud Shell pane, click advanced settings using following:
+
+   ```powershell
+   Resource Group -> Use existing -> <6+2>-az-104-rg1   eg:madalrt-az-104-rg1 
+   ```
+   ```powershell
+   Storage Account -> Create New -> <6+2>04storage eg:madalrt04storage 
+   ```
+   ```powershell
+   File Share -> Create New -> <6+2>04fs  eg:madalrt04fs  
+   ```
+    >**Note**: If powershell open automatically click Settings --> Reset user settings**.
+
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Allfiles/Labs/05/az104-05-vnetvm-loop-template.json)** and **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Allfiles/Labs/05/az104-05-vnetvm-loop-parameters.json)** into the Cloud Shell home directory.
