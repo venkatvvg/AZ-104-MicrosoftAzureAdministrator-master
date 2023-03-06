@@ -45,10 +45,10 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    Resource Group -> Use existing -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
    ```
    ```powershell
-   Storage Account -> Create New -> <6+2>04storage eg:madalrt05storage 
+   Storage Account -> Create New -> <6+2>05storage eg:madalrt05storage 
    ```
    ```powershell
-   File Share -> Create New -> <6+2>04fs  eg:madalrt05fs  
+   File Share -> Create New -> <6+2>05fs  eg:madalrt05fs  
    ```
     >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
 
