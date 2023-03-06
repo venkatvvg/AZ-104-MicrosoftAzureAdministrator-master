@@ -165,29 +165,6 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
-    
-1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
-
-1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
-
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
-
-    | Setting | Value|
-    | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
-    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
-
-
 
 1. Open the cloud shell on the top navigation bar and run the Following commands. Make sure you replace <6+2> with your UCID (eg:mandalrt):
     
