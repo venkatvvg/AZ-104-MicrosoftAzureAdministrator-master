@@ -49,7 +49,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
     | Resource Group | Create New -> **<6+2>-az104-04-rg1** |
-    | Name | **<6+2>-az104-04-vnet1** |
+    | Name | **az104-04-vnet1** |
     | Region | East US |
 
 1. Click **Next : IP Addresses** and delete the existing **IPv4 address space**. 
@@ -80,7 +80,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Showing the overview of <6+2>-az104-04-vnet1.
 
 
-1. On the **<6+2>-az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
+1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
 
 1. Create a subnet with the following settings (leave others with their default values):
 
@@ -160,9 +160,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **<6+2>-az104-04-rg1**.
 
-1. On the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **<6+2>-az104-04-vnet1**.
+1. On the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
-1. On the **<6+2>-az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
+1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, On settings Pane --> click **IP configurations**.
 
@@ -175,16 +175,16 @@ In this task, you will configure static assignment of public and private IP addr
     | Setting | Value |
     | --- | --- |
     | Public IP address | **Associate** |
-    | Name | **<6+2>-az104-04-pip0** |
+    | Name | **az104-04-pip0** |
     | SKU | **Standard** |
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
 
 1. Click **Save** the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-1. Navigate back to the **<6+2>-az104-04-vnet1** blade
+1. Navigate back to the **az104-04-vnet1** blade
 
-1. Click **<6+2>-az104-04-nic1** and, on the **<6+2>-az104-04-nic1** blade, On settings Pane --> click **IP configurations**.
+1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, On settings Pane --> click **IP configurations**.
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
@@ -195,7 +195,7 @@ In this task, you will configure static assignment of public and private IP addr
     | Setting | Value |
     | --- | --- |
     | Public IP address | **Associate** |
-    | Name | **<6+2>-az104-04-pip1** |
+    | Name | **az104-04-pip1** |
     | SKU | **Standard** |
     | Assignment | **Static** |
 
@@ -231,7 +231,7 @@ In this task, you will configure network security groups in order to allow for r
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **<6+2>-az104-04-rg1** (Select from the Dropdown) |
-    | Name | **<6+2>-az104-04-nsg01** |
+    | Name | **az104-04-nsg01** |
     | Region | East US |
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
@@ -258,9 +258,9 @@ In this task, you will configure network security groups in order to allow for r
     
     >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Show the Inbound Security rules of <6+2>-az104-04-nsg01
 
-1. On the **<6+2>-az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
+1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
 
-1. Associate the **<6+2>-az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
+1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
     >**Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
 
