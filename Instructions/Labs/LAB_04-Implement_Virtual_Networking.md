@@ -118,11 +118,13 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     >**Note**: If powershell open automatically click Settings --> Reset user settings**.
 
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json](https://drive.google.com/file/d/1q294EInD_cmlPU072bsXwJ_7bHEIyJ5c/view?usp=share_link)** and **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json](https://drive.google.com/file/d/1yMd3CPpJat9vesxJycd40kviSX58NjfV/view?usp=share_link)** into the Cloud Shell home directory.
+1. Download the two files **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json](https://drive.google.com/file/d/17TZ7cyZEM2CqTzoga82hkG6eNsyQ16jh/view?usp=sharing)** and **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json](https://drive.google.com/file/d/1yMd3CPpJat9vesxJycd40kviSX58NjfV/view?usp=share_link)**
+
+1. Edit the Parameters file using notepad, Replace <6+2> in the templete file with your 6+2 example: mandalrt and change the password.
+
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **
 
  >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
-
-1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
