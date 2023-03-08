@@ -126,7 +126,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **
 
- >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
+    >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
