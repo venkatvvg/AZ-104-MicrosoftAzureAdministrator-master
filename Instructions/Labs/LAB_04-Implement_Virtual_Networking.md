@@ -120,7 +120,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. Download the two files **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json](https://drive.google.com/file/d/17TZ7cyZEM2CqTzoga82hkG6eNsyQ16jh/view?usp=sharing)** and **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json](https://drive.google.com/file/d/1yMd3CPpJat9vesxJycd40kviSX58NjfV/view?usp=share_link)**
 
-1. Edit the Parameters file using notepad, change the password and replace <6+2> in the templete file with your 6+2 example: mandalrt. If you need help editing the file in the Shell please ask your TA for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
+1. Edit the Parameters file using notepad, change the password in parameters file, Click **Save** Open template file and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. If you need help editing the file in the Shell please ask your TA for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **
