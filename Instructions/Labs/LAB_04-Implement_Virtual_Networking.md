@@ -77,7 +77,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Click on **Go to resource** wait until the deployement finishes.
 
-    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Showing the overview of <6+2>-az104-04-vnet1.
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Showing the overview of <6+2>-vnet1.
 
 
 1. On the **<6+2>-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
@@ -94,7 +94,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Click **Save**
 
->**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Displaying 2 subnets on the subnet overview page of <6+2>-az104-04-vnet1.
+>**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Displaying 2 subnets on the subnet overview page of <6+2>-vnet1.
 
 #### Task 2: Deploy virtual machines into the virtual network
 
@@ -206,7 +206,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Click **Save** the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-   >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Display IP Configurations of az104-04-nic1 
+   >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Display IP Configurations of <6+2>-nic1 
 
 1. Navigate back to the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **<6+2>-vm0**, and from the **<6+2>-vm0** virtual machine blade, note the public IP address entry.
 
@@ -413,10 +413,10 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Verify that the output of the command includes the public IP address of **<6+2>-vm0**.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm1** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test external name resolution of the **<6+2>vm1** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
-   nslookup az104-04-vm1.[domain name] [Name server 1]
+   nslookup <6+2>-vm1.[domain name] [Name server 1]
    ```
 
 1. Verify that the output of the command includes the public IP address of **<6+2>-vm1**.
