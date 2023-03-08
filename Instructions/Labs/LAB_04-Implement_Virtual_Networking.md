@@ -120,7 +120,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. Download the two files **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json](https://drive.google.com/file/d/17TZ7cyZEM2CqTzoga82hkG6eNsyQ16jh/view?usp=sharing)** and **[\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json](https://drive.google.com/file/d/1yMd3CPpJat9vesxJycd40kviSX58NjfV/view?usp=share_link)**
 
-1. Edit the Parameters file using notepad, change the password and Click **Save**.
+1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
 
 1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
 
