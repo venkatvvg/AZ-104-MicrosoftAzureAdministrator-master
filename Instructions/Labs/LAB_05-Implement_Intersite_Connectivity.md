@@ -112,29 +112,29 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Review the resource group you created in the previous task 
     
-1. Check the virtual networks and verify that the first two (az-104-05-vnet0, az104-05-vnet1) are located in the same Azure region (East US) and the third one (az104-05-vnet2) in a different Azure region (West US).
+1. Check the virtual networks and verify that the first two (<6+2>-vnet0, <6+2>-vnet1) are located in the same Azure region (East US) and the third one (<6+2>-vnet2) in a different Azure region (West US).
     
-1. Click az104-05-vnet0, in the **settings** section, click **properties**, copy the resource ID and paste it in a notepad we will be using this resource ID in next steps.
+1. Click <6+2>-vnet0, in the **settings** section, click **properties**, copy the resource ID and paste it in a notepad we will be using this resource ID in next steps.
     
-1. Repeat the above steps for az104-05-vnet1 & az104-05-vnet2.
+1. Repeat the above steps for <6+2>-vnet1 & <6+2>-vnet2.
     
-    >**Example of Resource ID**: /subscriptions/12351f3d-xxxx-xxxx-xxxx-fc359ee9xxxx/resourceGroups/xxxxxx-az104-05-rg1/providers/Microsoft.Network/virtualNetworks/az104-05-vnet0.
+    >**Example of Resource ID**: /subscriptions/12351f3d-xxxx-xxxx-xxxx-fc359ee9xxxx/resourceGroups/xxxxxx-az104-05-rg1/providers/Microsoft.Network/virtualNetworks/<6+2>-vnet0.
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
-1. In the list of virtual networks, click **az104-05-vnet0**.
+1. In the list of virtual networks, click **<6+2>-vnet0**.
 
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+1. On the **<6+2>-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **<6+2>-az104-05-vnet0_to_az104-05-vnet1** |
+    | This virtual network: Peering link name | **<6+2>-vnet0_to_<6+2>-vnet1** |
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **<6+2>-az104-05-vnet1_to_az104-05-vnet0** |
+    | Remote virtual network: Peering link name | **<6+2>-vnet1_to_<6+2>-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **selected** |
     | Resource ID | Resource ID of vnet1 (The ID is copied is previous step) |
@@ -142,20 +142,20 @@ In this task, you will configure local and global peering between the virtual ne
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
 
-    >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
+    >**Note**: This step establishes two local peerings - one from <6+2>-vnet0 to <6+2>-vnet1 and the other from <6+2>-vnet1 to <6+2>-vnet0.
 
 
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+1. On the **<6+2>-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **<6+2>-az104-05-vnet0_to_az104-05-vnet2** |
+    | This virtual network: Peering link name | **<6+2>-vnet0_to_<6+2>-vnet2** |
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **<6+2>-az104-05-vnet2_to_az104-05-vnet0** |
+    | Remote virtual network: Peering link name | **<6+2>-vnet2_to_<6+2>-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **selected** |
     | Resource ID | Resource ID of vnet2 (The ID is copied is previous step) |
@@ -172,19 +172,19 @@ In this task, you will configure local and global peering between the virtual ne
    $rgName = '<6+2>-az104-05-rg1'
    ``` 
    ```powershell
-   $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
+   $vnet1 = Get-AzVirtualNetwork -Name '<6+2>-vnet1' -ResourceGroupName $rgname
    ``` 
    ```powershell
-   $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
+   $vnet2 = Get-AzVirtualNetwork -Name '<6+2>-vnet2' -ResourceGroupName $rgname
    ``` 
    ```powershell
-   Add-AzVirtualNetworkPeering -Name '<6+2>-az104-05-vnet1_to_az104-05-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+   Add-AzVirtualNetworkPeering -Name '<6+2>-vnet1_to_<6+2>-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
    ``` 
    ```powershell
-   Add-AzVirtualNetworkPeering -Name '<6+2>-az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+   Add-AzVirtualNetworkPeering -Name '<6+2>-vnet2_to_<6+2>-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
    ``` 
     
-    >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
+    >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to <6+2>-vnet2 and the other from <6+2>-vnet2 to <6+2>-vnet1.
 
 #### Task 3: Test intersite connectivity
 
@@ -192,9 +192,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Azure portal, search for and select **Virtual machines**.
 
-1. In the list of virtual machines, click **az104-05-vm0**.
+1. In the list of virtual machines, click **<6+2>-vm0**.
 
-1. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **<6+2>-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
@@ -202,9 +202,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. When prompted, sign in by using the **Student** username and the password from your parameters file. 
 
-1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+1. Within the Remote Desktop session to **<6+2>-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
-1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
+1. In the Windows PowerShell console window, run the following to test connectivity to **<6+2>-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
    ```powershell
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
@@ -214,7 +214,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. Examine the output of the command and verify that the connection was successful.
 
-1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
+1. In the Windows PowerShell console window, run the following to test connectivity to **<6+2>-vm2** (which has the private IP address of **10.52.0.4**):
 
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
@@ -222,9 +222,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade.
 
-1. In the list of virtual machines, click **az104-05-vm1**.
+1. In the list of virtual machines, click **<6+2>-vm1**.
 
-1. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **<6+2>-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
@@ -232,9 +232,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. When prompted, sign in by using the **Student** username and the password from your parameters file. 
 
-1. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+1. Within the Remote Desktop session to **<6+2>-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
-1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
+1. In the Windows PowerShell console window, run the following to test connectivity to **<6+2>-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
@@ -246,25 +246,18 @@ In this task, you will test connectivity between virtual machines on the three v
 
 #### Clean up resources
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+>**Note**: Remember to remove the resource group that you created.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-05*'
-   ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az104-05*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes and takes some time for the execution.
+    >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output True
 
 #### Review
 
