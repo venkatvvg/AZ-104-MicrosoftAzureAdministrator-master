@@ -56,7 +56,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Download the two files **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json](https://drive.google.com/file/d/1M48OGV42tyWxg5ud0Ze2MLq9Lo-YiBVL/view?usp=sharing)** and **[\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json](https://drive.google.com/file/d/1QGt3DEwz7XcOO7EcZiStpON4d9yEPjoL/view?usp=sharing)**.
 
-1. Edit the Parameters file using notepad, change the password and Click **Save**.
+1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
 
 1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
 
@@ -271,7 +271,7 @@ In this task, you will test connectivity between virtual machines on the three v
    ```
 
     >**Note**: The command executes and takes some time for the execution.
-    
+
     >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output True
 
 #### Review
