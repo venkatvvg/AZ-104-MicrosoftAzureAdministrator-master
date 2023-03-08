@@ -165,9 +165,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **<6+2>-vnet1**.
 
-1. On the **<6+2>-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-nic0** and **az104-nic1** attached to the virtual network.
+1. On the **<6+2>-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **<6+2>-nic0** and **<6+2>-nic1** attached to the virtual network.
 
-1. Click **az104-nic0** and, on the **az104-nic0** blade, On settings Pane --> click **IP configurations**.
+1. Click **<6+2>-nic0** and, on the **<6+2>-nic0** blade, On settings Pane --> click **IP configurations**.
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
@@ -208,7 +208,7 @@ In this task, you will configure static assignment of public and private IP addr
 
    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Display IP Configurations of az104-04-nic1 
 
-1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **<6+2>-vm0**, and from the **<6+2>-vm0** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **<6+2>-vm0**, and from the **<6+2>-vm0** virtual machine blade, note the public IP address entry.
 
 1. Navigate back to the **<6+2>-az104-04-rg1** resource group blade, in the list of its resources, click **<6+1>-vm1**, and from the **<6+2>-vm1** virtual machine blade, note the public IP address entry.
 
