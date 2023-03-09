@@ -42,7 +42,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Use existing -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
+   Resource Group -> Create New -> <6+2>-az-104-05-rg1   eg:madalrt-az-104-05-rg1 
    ```
    ```powershell
    Storage Account -> Create New -> <6+2>05storage eg:madalrt05storage 
