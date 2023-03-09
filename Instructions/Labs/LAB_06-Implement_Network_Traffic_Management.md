@@ -50,7 +50,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Use existing -> <6+2>-az-104-06-rg1   eg:madalrt-az-104-06-rg1 
+   Resource Group -> Use existing -> <6+2>-az104-06-rg1   eg:madalrt-az104-06-rg1 
    ```
    ```powershell
    Storage Account -> Create New -> <6+2>06storage eg:madalrt06storage 
