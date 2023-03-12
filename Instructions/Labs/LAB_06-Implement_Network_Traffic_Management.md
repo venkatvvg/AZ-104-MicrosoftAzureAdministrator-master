@@ -184,6 +184,8 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
+>**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the peerings of <6+2>-az104-06-vnet01.
+
 1. On the **<6+2>-az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
@@ -206,7 +208,7 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
->**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the peerings of <6+2>-az104-06-vnet01.
+>**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the peerings of <6+2>-az104-06-vnet01.
 
 
 #### Task 3: Test transitivity of virtual network peering
@@ -239,6 +241,8 @@ In this task, you will test transitivity of virtual network peering by using Net
 1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
+    
+    >**[Screenshot 7](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the connectivity status.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -259,6 +263,8 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the second spoke virtual network.
 
+    >**[Screenshot 8](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the connectivity status.
+
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -275,6 +281,8 @@ In this task, you will test transitivity of virtual network peering by using Net
 1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
     > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
+
+    >**[Screenshot 9](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the connectivity status.
 
 #### Task 4: Configure routing in the hub and spoke topology
 
@@ -306,7 +314,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the confirmation that the command completed successfully.
 
-   >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Display the output of Run Command script showing success.
+   >**[Screenshot 10](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Display the output of Run Command script showing success.
 
 1. On the **Run Command Script** blade, type the following and click **Run** to install the Routing role service.
 
@@ -323,6 +331,8 @@ In this task, you will configure and test routing between the two spoke virtual 
    > **Note**: Wait for the confirmation that the command completed successfully.
 
    > **Note**: Now you need to create and configure user defined routes on the spoke virtual networks.
+
+   >**[Screenshot 11](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Display the output of Run Command script showing success.
 
 1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Create**.
 
