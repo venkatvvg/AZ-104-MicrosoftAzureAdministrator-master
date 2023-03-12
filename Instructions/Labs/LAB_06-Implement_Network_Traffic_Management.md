@@ -441,6 +441,8 @@ In this task, you will configure and test routing between the two spoke virtual 
 
     > **Note**: You can use **Network Watcher** to view topology of the network.
 
+    >**[Screenshot 12](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Display the status you received.
+
 #### Task 5: Implement Azure Load Balancer
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network.
@@ -517,6 +519,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 1. Refresh the window to verify the message changes to the other virtual machine. This demonstrates the load balancer rotating through the virtual machines.
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
+
+    >**[Screenshot 13](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the **Hello World** message from  **<6+2>-az104-06-vm0**** and **<6+2>-az104-06-vm1**
 
 #### Task 6: Implement Azure Application Gateway
 
@@ -621,6 +625,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
 
+    >**[Screenshot 14](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Show the **Hello World** message from  **<6+2>-az104-06-vm2**** and **<6+2>-az104-06-vm3**
+
 #### Clean up resources
 
 >**Note**: Remember to remove the resource group that you created.
@@ -635,7 +641,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     >**Note**: The command executes and takes some time for the execution.
 
-    >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output True
+    >**[Screenshot 15](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md)**: Azure Cloud Shell Output True
 
 #### Review
 
