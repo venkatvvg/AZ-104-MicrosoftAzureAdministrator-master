@@ -186,7 +186,7 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: Wait for the operation to complete.
 
-    >**Note**: This step establishes two local peerings - one from <6+2>-az104-06-vnet01 to <6+2>-az104-06-vnet2 and the other from <6+2>-az104-06-vnet2 to <6+2>-az104-06-vnet01.
+    >**Note**: This step establishes two local peerings - one from <6+2>-vnet01 to <6+2>-vnet2 and the other from <6+2>-vnet2 to <6+2>-vnet01.
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
