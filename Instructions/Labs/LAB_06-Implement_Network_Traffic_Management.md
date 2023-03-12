@@ -62,7 +62,15 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json](https://drive.google.com/file/d/1tw80Djo5r7J6HmGUmr65ZPY27fdfLoiq/view?usp=sharing)** and **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json](https://drive.google.com/file/d/16GZ47cLSt44HLYjnkoFHCU7uMxgLtP85/view?usp=share_link)** into the Cloud Shell home directory.
+1. Download the two files **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json](https://drive.google.com/file/d/1tw80Djo5r7J6HmGUmr65ZPY27fdfLoiq/view?usp=sharing)** and **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json](https://drive.google.com/file/d/16GZ47cLSt44HLYjnkoFHCU7uMxgLtP85/view?usp=share_link)**
+
+1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
+
+1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
+
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **
+
+    >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
