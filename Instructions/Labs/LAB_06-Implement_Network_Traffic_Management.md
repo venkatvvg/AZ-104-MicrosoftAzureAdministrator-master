@@ -43,7 +43,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
-1.In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. Download the two files **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json](https://drive.google.com/file/d/1tw80Djo5r7J6HmGUmr65ZPY27fdfLoiq/view?usp=sharing)** and **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json](https://drive.google.com/file/d/16GZ47cLSt44HLYjnkoFHCU7uMxgLtP85/view?usp=share_link)**
+
+1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
+
+1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
+
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
@@ -59,14 +65,6 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    File Share -> Create New -> <6+2>06fs  eg:madalrt06fs  
    ```
     >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
-
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-1. Download the two files **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json](https://drive.google.com/file/d/1tw80Djo5r7J6HmGUmr65ZPY27fdfLoiq/view?usp=sharing)** and **[\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json](https://drive.google.com/file/d/16GZ47cLSt44HLYjnkoFHCU7uMxgLtP85/view?usp=share_link)**
-
-1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
-
-1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **
 
