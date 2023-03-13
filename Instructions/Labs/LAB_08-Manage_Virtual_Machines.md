@@ -40,7 +40,7 @@ In this lab, you will:
 
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
-1. Sign in to the [Azure portal](http://portal.azure.com).
+1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create**, click **+ Azure virtual machine**.
 
@@ -624,7 +624,10 @@ In this task, you will change the size of virtual machine scale set instances, c
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
 >**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+
+    >**Note**: If required in your resourse group create a storage container by using 6+2 in the names required.
 
 1. Remove az104-08-configure_VMSS_disks.ps1 by running the following command:
 
@@ -632,19 +635,15 @@ In this task, you will change the size of virtual machine scale set instances, c
    rm ~\az104-08*
    ```
 
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-08*'
-   ```
-
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az104-08*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes and takes some time for the execution.
+
+    >**[Screenshot 15](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Azure Cloud Shell Output True
 
 #### Review
 
