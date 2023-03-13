@@ -455,7 +455,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     >**[Screenshot 9](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management_Without_Testing.md)**: Show the **Hello World** message from  **<6+2>-vm0**** and **<6+2>-vm1**
 
 
-#### Task 6: Implement Azure Application Gateway
+#### Task 5: Implement Azure Application Gateway
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
@@ -475,6 +475,16 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 1. Click **Save**
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
+
+1. In the Azure portal, search for and select **Resource Group** and, on the **Resource Groups** blade, click **+ Create**.
+
+1. Create Resource Group with following settings
+
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource group | **<6+2>-az104-06-rg5** |
+    | Region | **East US** |
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **+ Create**.
 
