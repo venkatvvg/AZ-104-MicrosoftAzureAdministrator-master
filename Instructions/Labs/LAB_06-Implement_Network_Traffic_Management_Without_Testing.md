@@ -372,7 +372,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Create Resource Group with following settings
 
-| Setting | Value |
+    | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-06-rg4** |
