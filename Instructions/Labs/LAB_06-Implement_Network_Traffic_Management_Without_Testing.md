@@ -368,6 +368,16 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network.
 
+1. In the Azure portal, search for and select **Resource Group** and, on the **Resource Groups** blade, click **+ Create**.
+
+1. Create Resource Group with following settings
+
+| Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource group | **<6+2>-az104-06-rg4** |
+    | Region | **East US** |
+
 1. In the Azure portal, search for and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
@@ -390,6 +400,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 	| IP version | IPv4 |
 	| IP type | IP address |
     | Public IP address | **Create new** |
+    | Name | **<6+2>-pip4-ip**||
 	| Availability zone | **No Zone** | 
 
 1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click  **Next:Inbound rules**. 
