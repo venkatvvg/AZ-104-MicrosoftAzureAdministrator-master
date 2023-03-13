@@ -273,7 +273,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-06-rg1** |
-    | Location | the name of the Azure region in which you created the virtual networks |
+    | Location | East US |
     | Name | **<6+2>-rt23** |
     | Propagate gateway routes | **No** |
 
@@ -316,7 +316,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-06-rg1** |
-    | Region | the name of the Azure region in which you created the virtual networks |
+    | Region | East US|
     | Name | **<6+2>-rt32** |
     | Propagate gateway routes | **No** |
 
@@ -387,7 +387,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-06-rg4** |
     | Name | **<6+2>-lb4** |
-    | Region | name of the Azure region into which you deployed all other resources in this lab |
+    | Region | East US |
     | SKU  | **Standard** |
     | Type | **Public** |
 	| Tier | **Regional** |
@@ -485,7 +485,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-06-rg5** (create new) |
     | Application gateway name | **<6+2>-appgw5** |
-    | Region | name of the Azure region into which you deployed all other resources in this lab |
+    | Region | East US |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
 	| Instance count | **2** |
