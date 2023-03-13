@@ -41,34 +41,38 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
+1. Download the two files **[\\Allfiles\\Labs\\07\\az104-07-vms-loop-template.json](https://drive.google.com/file/d/1Drp9dACWIXoCDYp2LPcle9ta_nT6h5mm/view?usp=sharing)** and **[\\Allfiles\\Labs\\07\\az104-07-vms-loop-parameters.json](https://drive.google.com/file/d/1TSmGpyndBm5TB9hfSO1FupnEGEc6-6YT/view?usp=sharing)**
+
+1. Edit the Parameters file using notepad, change the password (your password should be 8-16 character length and should have uppercase character, lowercase character, numeric digit, special character and cannot have Control characters) Click **Save**.
+
+1. Edit the templete file in the notepad and replace <6+2> with your 6+2 example: mandalrt, Click **Save**. 
+
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+1. From the Cloud Shell pane, click advanced settings using following:
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** and **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
+   ```powershell
+   Resource Group -> Use existing -> <6+2>-az104-07-rg0   eg:madalrt-az104-07-rg0 
+   ```
+   ```powershell
+   Storage Account -> Create New -> <6+2>07storage eg:madalrt06storage 
+   ```
+   ```powershell
+   File Share -> Create New -> <6+2>07fs  eg:madalrt07fs  
+   ```
+    >**Note**: If powershell open automatically click Settings --> Reset user settings, Repeat above steps**.
 
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**. Upload **az104-07-vms-loop-template.json** and **az104-07-vms-loop-parameters.json**
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
-
-    >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`
-    >**Note**: Each command below should be typed separately
-
-    ```powershell
-    $location = '[Azure_region]'
-    ```
-  
-    ```powershell
-     $rgName = 'az104-07-rg0'
-    ```
-
-    ```powershell
-    New-AzResourceGroup -Name $rgName -Location $location
-    ```
+    >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
     
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+
+    ```powershell
+        $rgName = '<6+2>-az104-07-rg0'
+    ```
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -78,14 +82,9 @@ In this task, you will deploy an Azure virtual machine that you will use later i
       -AsJob
    ```
 
-    >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
+    >**Note**: If you got an error stating the VM size is not available please ask your TA for assistance and try these steps.
 
-    >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
-    > 1. Click on the `{}` button in your CloudShell, select the **az104-07-vm-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
-    > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
-    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
-    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
-    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Show the output of the powershell
 
 1. Close the Cloud Shell pane.
 
@@ -100,9 +99,9 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **new** resource group **az104-07-rg1** |
-    | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
-    | Region | the name of an Azure region where you can create an Azure Storage account  |
+    | Resource group | the name of a **new** resource group **<6+2>-az104-07-rg1** |
+    | Storage account name | **<6+2>-sa1** |
+    | Region | **East US*  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
@@ -124,6 +123,8 @@ In this task, you will create and configure an Azure Storage account.
 
     > **Note**: The cool access tier is optimal for data which is not accessed frequently.
 
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Show the Overview of the Storage Account Created.
+
 #### Task 3: Manage blob storage
 
 In this task, you will create a blob container and upload a blob into it.
@@ -134,10 +135,10 @@ In this task, you will create a blob container and upload a blob into it.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-container**  |
+    | Name | **<6+2>-container**  |
     | Public access level | **Private (no anonymous access)** |
 
-1. In the list of containers, click **az104-07-container** and then click **Upload**.
+1. In the list of containers, click **<6+2>-container** and then click **Upload**.
 
 1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**.
 
@@ -157,7 +158,9 @@ In this task, you will create a blob container and upload a blob into it.
 
     > **Note**: Note that the upload automatically created a subfolder named **licenses**.
 
-1. Back on the **az104-07-container** blade, click **licenses** and then click **LICENSE**.
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Show the subfolder named **licenses**.
+
+1. Back on the **<6+2>-container** blade, click **licenses** and then click **LICENSE**.
 
 1. On the **licenses/LICENSE** blade, review the available options.
 
@@ -202,7 +205,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
+1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **<6+2>-container** blade.
 
 1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
 
@@ -210,7 +213,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: At this point, you do not have permissions to change the Authentication method.
 
-1. On the **az104-07-container** blade, click **Access Control (IAM)**.
+1. On the **<6+2>-container** blade, click **Access Control (IAM)**.
 
 1. On the **Check access** tab, click **Add role assignment**.
 
@@ -222,7 +225,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Assign access to | **User, group, or service principal** |
     | Members | the name of your user account |
 
-1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
+1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **<6+2>-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
@@ -238,17 +241,17 @@ In this task, you will create and configure Azure Files shares.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-share** |
+    | Name | **<6+2>-share** |
 
 1. Click the newly created file share and click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **<6+2>-vm0**.
 
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
+1. On the **<6+2>-vm0** blade, in the **Operations** section, click **Run command**.
 
-1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**.
+1. On the **<6+2>-vm0 - Run command** blade, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
 
@@ -257,16 +260,18 @@ In this task, you will create and configure Azure Files shares.
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
    ```powershell
-   New-Item -Type Directory -Path 'Z:\az104-07-folder'
+   New-Item -Type Directory -Path 'Z:\<6+2>-folder'
 
-   New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
+   New-Item -Type File -Path 'Z:\<6+2>-folder\az-104-07-file.txt'
    ```
 
 1. Verify that the script completed successfully.
 
-1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
+ >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Show the output of the script.
 
-1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
+1. Navigate back to the **<6+2>-share** file share blade, click **Refresh**, and verify that **<6+2>-folder** appears in the list of folders.
+
+1. Click **<6+2>-folder** and verify that **<6+2>-file.txt** appears in the list of files.
 
 #### Task 6: Manage network access for Azure Storage
 
@@ -294,7 +299,7 @@ In this task, you will configure network access for Azure Storage.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
+1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **<6+2>-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
 
    ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
@@ -303,29 +308,25 @@ In this task, you will configure network access for Azure Storage.
 
     > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
 
+     >**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Show the download attempt failed.
+
 1. Close the Cloud Shell pane.
 
 #### Clean up resources
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. You might also try to delete the Resource Group where the resources reside. That is a quick Administrator shortcut. If you have concerns speak to your instructor.
+>**Note**: Remember to remove the resource group that you created.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-07*'
-   ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes and takes some time for the execution.
+
+    >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Azure Cloud Shell Output True
 
 #### Review
 
