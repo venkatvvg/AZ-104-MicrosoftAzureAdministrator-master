@@ -1,5 +1,5 @@
-$rgName = 'az104-08-rg02'
-$vmssName = 'az10408vmss0'
+$rgName = '<6+2>-az104-08-rg02'
+$vmssName = '<6+2>vmss0'
 $vmss = Get-AzVmss `
 	-ResourceGroupName $rgName `
 	-VMScaleSetName $vmssName

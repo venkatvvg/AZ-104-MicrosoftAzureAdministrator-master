@@ -1,10 +1,10 @@
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "az104-08-vm1/customScriptExtension",
+            "name": "<6+2>-vm1/customScriptExtension",
             "apiVersion": "2018-06-01",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "az104-08-vm1"
+                "<6+2>-vm1"
             ],
             "properties": {
                 "publisher": "Microsoft.Compute",
