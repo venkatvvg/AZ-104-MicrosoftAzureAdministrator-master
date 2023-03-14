@@ -50,7 +50,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
     | Resource group | the name of a new resource group **<6+2>az104-08-rg01** |
-    | Virtual machine name | **<6+2>az104-08-vm0** |
+    | Virtual machine name | **<6+2>-vm0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1** |
@@ -75,7 +75,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Name | **<6+2>-az104-08-rg01-vnet** |
+    | Name | **<6+2>-vnet** |
     | Address range | **10.80.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
@@ -120,11 +120,11 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Resource Group | **az104-08-rg01** |
-    | Network Interface Name | **az104-08-vm1-nic1** |
-    | Public IP Address Name | **az104-08-vm1-ip** |
-    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name   | **az104-08-vm1** |
-    | Virtual Machine RG | **az104-08-rg01** |    
+    | Resource Group | **<6+2>-az104-08-rg01** |
+    | Network Interface Name | **<6+2>-vm1-nic1** |
+    | Public IP Address Name | **<6+2>-vm1-ip** |
+    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name   | **<6+2>-vm1** |
+    | Virtual Machine RG | **<6+2>-az104-08-rg01** |    
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password**  |
     | Enable Hotpatching | **false** |
@@ -155,11 +155,11 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **scripts** blade, click **Upload**.
 
-1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, navigate to the **\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**.
+1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, navigate to the **[\\Allfiles\\Labs\\08](https://drive.google.com/drive/folders/1dgwbUyp6k5cMzlM_FblXFF57QEc6Unxl?usp=sharing)** folder, select **az104-08-install_IIS.ps1**, click **Download**, and back on the **Upload blob** blade, click **Upload**.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
+1. On the **<6+2>-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
 1. On the **Install an Extension** blade, click **Custom Script Extension** and then click **Next**.
 
@@ -169,11 +169,11 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. Back on the **Install extension** blade, click **Review + create** and, on the **Review + create** blade click **Create**.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm1**.
 
-1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
+1. On the **<6+2>-vm1** blade, in the **Automation** section, click **Export template**.
 
-1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
+1. On the **<6+2>-vm1 - Export template** blade, click **Deploy**.
 
 1. On the **Custom deployment** blade, click **Edit template**.
 
@@ -186,11 +186,11 @@ In this task, you will install Windows Server Web Server role on the two Azure v
    ```json
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "az104-08-vm1/customScriptExtension",
+            "name": "<6+2>-vm1/customScriptExtension",
             "apiVersion": "2018-06-01",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "az104-08-vm1"
+                "<6+2>-vm1"
             ],
             "properties": {
                 "publisher": "Microsoft.Compute",
@@ -209,11 +209,11 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
-    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
+    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **<6+2>-vm0** and **<6+2>-vm1** virtual machines. This should take no more than 3 minutes.
 
-1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **<6+2>-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **az104-08-vm0**:
+1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **<6+2>-vm0**:
 
    ```powershell
    Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
@@ -221,41 +221,41 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
-    >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **az104-08-vm1**.
+    >**Note**: You can also connect to **<6+2>-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **<6+2>-vm1**.
 
 #### Task 3: Scale compute and storage for Azure virtual machines
 
 In this task you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2** and click **Resize**
+1. On the **<6+2>-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2** and click **Resize**
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
+1. On the **<6+2>-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
 1. Create a managed disk with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Disk name | **az104-08-vm0-datadisk-0** |
+    | Disk name | **<6+2>-vm0-datadisk-0** |
     | Storage type | **Premium SSD** |
     | Size (GiB| **1024** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
+1. Back on the **<6+2>-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
 1. Create a managed disk with the following settings (leave others with their default values) and Save changes:
 
     | Setting | Value |
     | --- | --- |
-    | Disk name | **az104-08-vm0-datadisk-1** |
+    | Disk name | **<6+2>-vm0-datadisk-1** |
     | Storage type | **Premium SSD** |
     | Size (GiB)| **1024 GiB** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
+1. Back on the **<6+2>-vm0 - Disks** blade, click **Save**.
 
-1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+1. On the **<6+2>-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
@@ -271,11 +271,11 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm1**.
 
-1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
+1. On the **<6+2>-vm1** blade, in the **Automation** section, click **Export template**.
 
-1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
+1. On the **<6+2>-vm1 - Export template** blade, click **Deploy**.
 
 1. On the **Custom deployment** blade, click **Edit template**.
 
@@ -296,14 +296,14 @@ In this task you will scale compute for Azure virtual machines by changing their
                     "dataDisks": [
                       {
                         "lun": 0,
-                        "name": "az104-08-vm1-datadisk0",
+                        "name": "<6+2>-vm1-datadisk0",
                         "diskSizeGB": "1024",
                         "caching": "ReadOnly",
                         "createOption": "Empty"
                       },
                       {
                         "lun": 1,
-                        "name": "az104-08-vm1-datadisk1",
+                        "name": "<6+2>-vm1-datadisk1",
                         "diskSizeGB": "1024",
                         "caching": "ReadOnly",
                         "createOption": "Empty"
@@ -313,14 +313,14 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 49.
 
-    >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
+    >**Note**: This section of the template creates two managed disks and attaches them to **<6+2>-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
 1. Click **Save** and, back on the **Custom deployment** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**.
 
-    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
+    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **<6+2>-vm1** virtual machine. This should take no more than 3 minutes.
 
-1. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+1. Back on the **<6+2>-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
@@ -363,8 +363,8 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-08-rg02** |
-    | Virtual machine scale set name | **az10408vmss0** |
+    | Resource group | the name of a new resource group **<6+2>az104-08-rg02** |
+    | Virtual machine scale set name | **<6+2>vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
@@ -382,12 +382,12 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-08-rg02-vnet** |
+    | Name | **<6+2>-rg02-vnet** |
     | Address range | **10.82.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet range | **10.82.0.0/24** |
 
-    >**Note**: Once you create a new virtual network and return to the **Networking** tab of the **Create a virtual machine scale set** blade, the **Virtual network** value will be automatically set to **az104-08-rg02-vnet**.
+    >**Note**: Once you create a new virtual network and return to the **Networking** tab of the **Create a virtual machine scale set** blade, the **Virtual network** value will be automatically set to **<6+2>-rg02-vnet**.
 
 1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Edit network interface** icon to the right of the network interface entry.
 
