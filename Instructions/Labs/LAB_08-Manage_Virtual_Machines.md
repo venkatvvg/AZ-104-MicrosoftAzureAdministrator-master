@@ -49,8 +49,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource group | the name of a new resource group **az104-08-rg01** |
-    | Virtual machine name | **az104-08-vm0** |
+    | Resource group | the name of a new resource group **<6+2>az104-08-rg01** |
+    | Virtual machine name | **<6+2>az104-08-vm0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1** |
@@ -75,7 +75,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-08-rg01-vnet** |
+    | Name | **<6+2>-az104-08-rg01-vnet** |
     | Address range | **10.80.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
@@ -84,7 +84,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Subnet | **subnet0** |
+    | Subnet | **<6+2>-subnet0** |
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
@@ -621,19 +621,9 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 #### Clean up resources
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+>**Note**: Remember to remove the resource group that you created.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-    >**Note**: If required in your resourse group create a storage container by using 6+2 in the names required.
-
-1. Remove az104-08-configure_VMSS_disks.ps1 by running the following command:
-
-   ```powershell
-   rm ~\az104-08*
-   ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
@@ -643,8 +633,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The command executes and takes some time for the execution.
 
-    >**[Screenshot 15](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)**: Azure Cloud Shell Output True
-
+    >**[Screenshot 11](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Azure Cloud Shell Output True
+    
 #### Review
 
 In this lab, you have:
