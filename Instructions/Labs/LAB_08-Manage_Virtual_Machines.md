@@ -51,7 +51,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource group | the name of a new resource group **<6+2>az104-08-rg01** |
+    | Resource group | the name of a new resource group **<6+2>-az104-08-rg01** |
     | Virtual machine name | **<6+2>-vm0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
@@ -157,7 +157,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **scripts** blade, click **Upload**.
 
-1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, navigate to the **[\\Allfiles\\Labs\\08](https://drive.google.com/drive/folders/1dgwbUyp6k5cMzlM_FblXFF57QEc6Unxl?usp=sharing)** folder, select **az104-08-install_IIS.ps1**, click **Download**, and back on the **Upload blob** blade, click **Upload**.
+1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, on the **Upload blob** blade, select **az104-08-install_IIS.ps1** from files downloaded, click **Upload**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm0**.
 
