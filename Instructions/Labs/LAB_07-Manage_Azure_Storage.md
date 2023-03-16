@@ -100,7 +100,7 @@ In this task, you will create and configure an Azure Storage account.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a **new** resource group **<6+2>-az104-07-rg1** |
-    | Storage account name | **<6+2>-sa1** |
+    | Storage account name | **<6+2>sa1** |
     | Region | **East US*  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
