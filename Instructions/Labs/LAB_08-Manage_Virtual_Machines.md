@@ -86,7 +86,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Subnet | **<6+2>-subnet0** |
+    | Subnet | **subnet0** |
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
