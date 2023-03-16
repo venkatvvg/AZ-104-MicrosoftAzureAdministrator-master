@@ -129,7 +129,7 @@ In this task, you will create and configure an Azure Storage account.
 
 In this task, you will create a blob container and upload a blob into it.
 
-1. On the Storage account blade, in the **Data storage** section, click **Containers**.
+1. On the Storage account blade **<6+2>07storage**, in the **Data storage** section, click **Containers**.
 
 1. Click **+ Container** and create a container with the following settings:
 
