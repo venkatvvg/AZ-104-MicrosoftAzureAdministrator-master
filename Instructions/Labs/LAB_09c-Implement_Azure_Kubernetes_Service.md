@@ -65,10 +65,10 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09c-rg1** |
+    | Resource group | the name of a new resource group **<6+2>-az104-09c-rg1** |
     | Cluster preset configuration | **Dev/Test ($)** |
-    | Kubernetes cluster name | **az104-9c-aks1** |
-    | Region | the name of a region where you can provision a Kubernetes cluster |
+    | Kubernetes cluster name | **<6+2>-az104-9c-aks1** |
+    | Region | East US |
     | Availability zones | **None** (uncheck all boxes) |
     | Kubernetes version | accept the default |
     | API server availability | accept the default |
@@ -97,6 +97,8 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | DNS name prefix | any valid, globally unique DNS prefix|
 
 1. Click **Next: Integrations >**, on the **Integrations** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click **Create**.
+
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md)**: Show the Kubernetes cluster overview.
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
 
@@ -170,6 +172,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
 
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md)**: Show **Welcome to nginx!** page with URL.
+
+
 #### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
@@ -222,6 +227,8 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     > **Note**: Review the output of the command and verify that the number of pods increased to 10.
 
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md)**: Show the increase of pods.
+
 1. From the **Cloud Shell** pane, run the following to review the pods distribution across cluster nodes:
 
     ```sh
@@ -230,35 +237,30 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     > **Note**: Review the output of the command and verify that the pods are distributed across both nodes.
 
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md)**: Show the distribution of pods on both nodes.
+    
+
 1. From the **Cloud Shell** pane, run the following to delete the deployment:
 
     ```sh
     kubectl delete deployment nginx-deployment
     ```
 
-1. Close the **Cloud Shell** pane.
-
 #### Clean up resources
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+>**Note**: Remember to remove the resource group that you created.
 
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
-
-1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].name" --output tsv
-   ```
+1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```powershell
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes and takes some time for the execution.
+
+    >**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md)**: Azure Cloud Shell Output True
 
 #### Review
 
