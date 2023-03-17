@@ -252,6 +252,8 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage** and use naming conventions with <6+2>.
+
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```powershell
