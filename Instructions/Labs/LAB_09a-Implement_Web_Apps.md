@@ -38,7 +38,7 @@ In this lab, you will:
 
 In this task, you will create an Azure web app.
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
 
@@ -47,7 +47,7 @@ In this task, you will create an Azure web app.
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09a-rg1** |
+    | Resource group | the name of a new resource group **<6+2>-az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 8.0** |
@@ -60,6 +60,8 @@ In this task, you will create an Azure web app.
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
 1. On the deployment blade, click **Go to resource**.
+
+>**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Show the overview of the webapp.
 
 #### Task 2: Create a staging deployment slot
 
@@ -84,6 +86,8 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
+>**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Show the deployment shots.
+
 #### Task 3: Configure web app deployment settings
 
 In this task, you will configure web app deployment settings.
@@ -102,7 +106,7 @@ In this task, you will configure web app deployment settings.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any globally unique name (must not contain `@` character) |
+    | User name | <6+2>dc |
     | Password | any password that satisfies complexity requirements|
 
     >**Note:** You will need these credentials in the next task of this lab.
@@ -151,6 +155,8 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
+>**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Show **Hello World!** displayed in browser along with URL.
+
 #### Task 5: Swap the staging slots
 
 In this task, you will swap the staging slot with the production slot
@@ -164,6 +170,8 @@ In this task, you will swap the staging slot with the production slot
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
+
+>**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Show **Hello World!** displayed in browser along with URL.
 
 #### Task 6: Configure and test autoscaling of the Azure web app
 
@@ -214,7 +222,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
    ```powershell
-   $rgName = 'az104-09a-rg1'
+   $rgName = '<6+2>-az104-09a-rg1'
 
    $webapp = Get-AzWebApp -ResourceGroupName $rgName
    ```
@@ -233,31 +241,26 @@ In this task, you will configure and test autoscaling of Azure web app.
 
     >**Note**: You may need to **Refresh** the page.
 
+>**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Show **Hello World!** displayed the increase in instances.
+
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
-1. Close the Cloud Shell pane.
 
 #### Clean up resources
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+>**Note**: Remember to remove the resource group that you created.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-09a*'
-   ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name '<6+2>*' | Remove-AzResourceGroup
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes and takes some time for the execution.
+
+    >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_09a-Implement_Web_Apps.md)**: Azure Cloud Shell Output True
 
 #### Review
 
