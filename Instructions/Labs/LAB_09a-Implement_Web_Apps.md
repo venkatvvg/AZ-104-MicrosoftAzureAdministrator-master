@@ -53,7 +53,8 @@ In this task, you will create an Azure web app.
     | Runtime stack | **PHP 8.0** |
     | Operating system | **Linux** |
     | Region | the name of an Azure region where you can provision Azure web apps |
-    | App service plan | accept the default configuration |
+    | Linux plan | Create new <6+2>-Appserviceplan|
+    | App service plan | Premium V3 P1V3 |
 
 1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
