@@ -70,6 +70,10 @@ In this task, you will deploy two virtual machines that will be used to test dif
     $location = 'eastus'
     ```
 
+    ```powershell
+    $rgName = '<6+2>-az104-10-rg0'
+    ```
+
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
