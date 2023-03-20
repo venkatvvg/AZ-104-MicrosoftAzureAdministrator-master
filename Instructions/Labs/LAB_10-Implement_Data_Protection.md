@@ -344,7 +344,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
-1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
+1. On the **File Recovery** blade, click on select and accept the default recovery point and click **Download Executable**.
 
     >**Note**: The script mounts the disks from the selected recovery point as local drives within the operating system from which the script is run.
 
