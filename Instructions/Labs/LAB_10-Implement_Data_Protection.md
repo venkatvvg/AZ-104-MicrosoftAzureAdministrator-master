@@ -79,7 +79,6 @@ In this task, you will deploy two virtual machines that will be used to test dif
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-10-vms-edge-template.json `
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
-      -AsJob
    ```
     >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_10-Implement_Data_Protection.md)**: Show the output of the script run above.
 
