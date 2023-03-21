@@ -54,7 +54,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 1. From the Cloud Shell pane, click advanced settings using following:
 
    ```powershell
-   Resource Group -> Create New -> <6+2>rg   eg:madalrtrg 
+   Resource Group -> Create New -> <6+2>-az104-10-rg0   eg:madalrt-az104-10-rg0 
    ```
    ```powershell
    Storage Account -> Create New -> <6+2>storage eg:madalrtstorage 
