@@ -71,7 +71,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
     ```
 
     ```powershell
-    $rgName = '<6+2>-az104-10-rg1'
+    $rgName = '<6+2>-az104-10-rg0'
     ```
 
    ```powershell
