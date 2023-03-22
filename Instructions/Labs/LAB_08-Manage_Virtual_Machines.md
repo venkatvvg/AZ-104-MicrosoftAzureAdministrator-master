@@ -219,8 +219,6 @@ In this task, you will install Windows Server Web Server role on the two Azure v
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **<6+2>-vm0** and **<6+2>-vm1** virtual machines. This should take no more than 3 minutes.
 
 
-    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**:Show that deployement is succesful for the above step.
-
 1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **<6+2>-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **<6+2>-vm0**:
@@ -232,6 +230,8 @@ In this task, you will install Windows Server Web Server role on the two Azure v
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
     >**Note**: You can also connect to **<6+2>-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **<6+2>-vm1**.
+
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**:Show that command runs succesfully.
 
 #### Task 3: Scale compute and storage for Azure virtual machines
 
@@ -280,6 +280,8 @@ In this task you will scale compute for Azure virtual machines by changing their
    ```
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
+
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**:Show that Command runs is succesful for the above step.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm1**.
 
