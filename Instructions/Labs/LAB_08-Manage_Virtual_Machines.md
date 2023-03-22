@@ -208,7 +208,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
                     "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
               }
             }
-        }
+        },
 
    ```
 
@@ -217,6 +217,9 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **<6+2>-vm0** and **<6+2>-vm1** virtual machines. This should take no more than 3 minutes.
+
+
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**:Show that deployement is succesful for the above step.
 
 1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **<6+2>-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
