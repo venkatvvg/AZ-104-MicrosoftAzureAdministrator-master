@@ -136,7 +136,12 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
 
-    >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
+    >**Note**: Wait for both deployments to complete before you proceed to the next task. 
+
+1. Click **Go to Resource Group**
+
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**:Screenshot of <6+2>-az104-08-rg01 overview.
+
 
 #### Task 2: Configure Azure virtual machines by using virtual machine extensions
 
