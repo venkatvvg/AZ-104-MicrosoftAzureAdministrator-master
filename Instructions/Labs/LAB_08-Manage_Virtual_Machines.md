@@ -186,7 +186,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
+1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line): Replace <6+2> with you ID.
 
    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
@@ -302,7 +302,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line (`"dataDisks": [ ]` line) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line (`"dataDisks": [ ]` line) with the following code in line 51(Approx) and replace <6+2> with UCID: 
 
    ```json
                     "dataDisks": [
