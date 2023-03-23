@@ -136,7 +136,12 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
 
-    >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
+    >**Note**: Wait for both deployments to complete before you proceed to the next task. 
+
+1. Click **Go to Resource Group**
+
+    >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Screenshot of <6+2>-az104-08-rg01 overview.
+
 
 #### Task 2: Configure Azure virtual machines by using virtual machine extensions
 
@@ -181,7 +186,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
+1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line): Replace <6+2> with you ID.
 
    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
@@ -203,7 +208,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
                     "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
               }
             }
-        }
+        },
 
    ```
 
@@ -212,6 +217,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **<6+2>-vm0** and **<6+2>-vm1** virtual machines. This should take no more than 3 minutes.
+
 
 1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **<6+2>-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
@@ -224,6 +230,8 @@ In this task, you will install Windows Server Web Server role on the two Azure v
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
     >**Note**: You can also connect to **<6+2>-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **<6+2>-vm1**.
+
+    >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Show that command runs succesfully in <6+2>-vm1 Run ocmmand.
 
 #### Task 3: Scale compute and storage for Azure virtual machines
 
@@ -273,6 +281,8 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
+    >**[Screenshot 3](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Show that Command runs is succesful for the above step in <6+2>-vm0 Run ocmmand .
+
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **<6+2>-vm1**.
 
 1. On the **<6+2>-vm1** blade, in the **Automation** section, click **Export template**.
@@ -292,7 +302,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line (`"dataDisks": [ ]` line) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line (`"dataDisks": [ ]` line) with the following code in line 51(Approx) and replace <6+2> with UCID: 
 
    ```json
                     "dataDisks": [
@@ -338,6 +348,8 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
+    >**[Screenshot 4](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Show that Command runs is succesful for the above step in <6+2>-vm1 Run Command.
+
 #### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -353,6 +365,8 @@ In this task you will scale compute for Azure virtual machines by changing their
 
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
+   
+   >**[Screenshot 5](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Show the Output of Command Shell.
 
 #### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
@@ -458,11 +472,13 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
+    >**[Screenshot 6](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**:Overview of New Resource Created (<6+2>vmss0)
+
 #### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 
 In this task, you will install Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task **(<6+@>az10408rg02diag)**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -498,6 +514,8 @@ In this task, you will install Windows Server Web Server role on the instances o
 1. On the **<6+2>vmss0-lb** blade, note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **<6+2>vmss0**.
+
+    >**[Screenshot 7](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**: Display the output of the IP Address showing <6+2>vmss0
 
 #### Task 7: Scale compute and storage for Azure virtual machine scale sets
 
@@ -577,6 +595,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Once the third instance is provisioned, navigate to its blade to determine its **Location** (it should be different than the first two zones you identified earlier in this task.
 
+    >**[Screenshot 8](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md)**: Click on overview of <6+2>vmss0_2, Display 3 graphs Network, Data Bytes, Disk Operations.
+
 1. Close Cloud Shell pane.
 
 1. On the **<6+2>vmss0** blade, in the **Settings** section, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values):
@@ -635,7 +655,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The command executes and takes some time for the execution.
 
-    >**[Screenshot 11](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Azure Cloud Shell Output True
+    >**[Screenshot 9](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)**: Azure Cloud Shell Output True
     
 #### Review
 
