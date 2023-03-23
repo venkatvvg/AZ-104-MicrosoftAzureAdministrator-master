@@ -41,7 +41,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Sign in to the [**Azure portal**](https://portal.azure.com) and login using the uc mail ID click profile and switch directory to CECH SoIT Bootcamp.
 
-1. Download the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/1OgXan7w6K9iz1eeffsna3tm9hZ8vy0QR/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1UxA_ZUA8PI_GtDaS7kryOSpzJQ7F8MAz/view?usp=sharing)** 
+1. Download the files **[\\Allfiles\\Labs\\11\\az104-11-vm-template.json](https://drive.google.com/file/d/138AZycnmrVSmKZ1BgD40MhOYKL8WNIMc/view?usp=sharing)** and **[\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json](https://drive.google.com/file/d/1Qmn6fg1ftqv-JO8VY7xNpBFa2zTInVuY/view?usp=sharing)** 
 
 1. Edit the files using notepad, change the password and replace <6+2> with your 6+2 example: mandalrt. 
 
