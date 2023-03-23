@@ -38,7 +38,7 @@ In this lab, you will:
 
 #### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 
-1. Download the files for [AZ104-08 Lab](https://drive.google.com/file/d/1ekniwk6gqYwo2lRuZ9gazLMPK7ieBS5Y/view?usp=sharing) and replace <6+2> in all files and save it. Use these files when ever these files are being reffered in the lab.
+1. Download the files for [AZ104-08 Lab](https://drive.google.com/drive/folders/1dgwbUyp6k5cMzlM_FblXFF57QEc6Unxl?usp=sharing) and replace <6+2> in all files and save it. Use these files when ever these files are being reffered in the lab.
 
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
