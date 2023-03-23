@@ -82,10 +82,6 @@ In this task, you will deploy two virtual machines that will be used to test dif
    ```
     >**[Screenshot 1](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_10-Implement_Data_Protection.md)**: Show the output of the script run above.
 
-1. Minimize Cloud Shell (but do not close it).
-
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
-
 #### Task 2: Create a Recovery Services vault
 
 In this task, you will create a recovery services vault.
