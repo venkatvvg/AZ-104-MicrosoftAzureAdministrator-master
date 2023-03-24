@@ -51,7 +51,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. Select **Show advanced settings** and select your cloud shell region as **East US** then create a storage account with below configurations by selecting create new
+1. Select **Show advanced settings** and select your cloud shell region as **East US 2** then create a storage account with below configurations by selecting create new
 | Settings | Value |
     | --- | --- |
     | Resource Group | **<6+2>-az104-11-rg0** |
@@ -116,7 +116,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **<6+2>-az104-11-rg1** |
     | Log Analytics Workspace Name | **<6+2>-law** |
-    | Region | **East US** |
+    | Region | **East US 2** |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -131,7 +131,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Automation account name | **<6+2>-aa**|
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **<6+2>-az104-11-rg1**|
-    | Region | **East US** |
+    | Region | **East US 2** |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
