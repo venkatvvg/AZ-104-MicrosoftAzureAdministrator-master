@@ -54,7 +54,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Select **Show advanced settings** and select your cloud shell region as **East US** then create a storage account with below configurations by selecting create new
 | Settings | Value |
     | --- | --- |
-    | Resource Group | **<6+2>-az104-11s-rg0** |
+    | Resource Group | **<6+2>-az104-11-rg0** |
     | Storage Account | **<6+2>sa** |
     | File Share | **<6+2>fs** |
 
