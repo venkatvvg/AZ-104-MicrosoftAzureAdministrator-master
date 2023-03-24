@@ -116,7 +116,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **<6+2>-az104-11-rg1** |
     | Log Analytics Workspace Name | **<6+2>-law** |
-    | Region | **East US 2** |
+    | Region | **East US** |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
