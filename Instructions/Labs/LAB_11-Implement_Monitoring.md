@@ -65,7 +65,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
    ```powershell
-   $location = 'eastus'
+   $location = 'eastus2'
    ```
    
    ```powershell
@@ -117,8 +117,6 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Resource group | the name of a new resource group **<6+2>-az104-11-rg1** |
     | Log Analytics Workspace Name | **<6+2>-law** |
     | Region | **East US** |
-
-    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
