@@ -115,7 +115,7 @@ In this task, you will create a recovery services vault.
 
 1. Back on the **<6+2>-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled** and makesure **Enable Always-on Soft Delete** check boks is **un-checked**.
+1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled** and makesure **Enable Always-on Soft Delete** checkbox is **un-checked**.
 
 1. Close the **Security Settings** blade and, back on the **<6+2>-rsv1** Recovery Services vault blade, click **Overview**.
 
