@@ -22,8 +22,8 @@ In this lab, you will:
 + Task 3: Implement Azure virtual machine-level backup
 + Task 4: Implement File and Folder backup
 + Task 5: Perform file recovery by using Azure Recovery Services agent
-+ Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
-+ Task 7: Review the Azure Recovery Services soft delete functionality (optional)
++ Task 6: Perform file recovery by using Azure virtual machine snapshots
++ Task 7: Review the Azure Recovery Services soft delete functionality
 
 ## Estimated timing: 50 minutes
 
@@ -263,7 +263,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**[Screenshot 2](https://github.com/venkatvvg/AZ-104-MicrosoftAzureAdministrator-master/blob/master/Instructions/Labs/LAB_10-Implement_Data_Protection.md)**: Show the entry referencing the **C:\\** drive of **<6+2>-vm1.**
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+#### Task 5: Perform file recovery by using Azure Recovery Services agent
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
